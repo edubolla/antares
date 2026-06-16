@@ -147,6 +147,16 @@ export const faqs = [
       "Sim. A Antares atua com projeto, engenharia e aprovação documental, além da execução completa da obra.",
   },
   {
+    question: "Vocês fazem projeto e obra juntos?",
+    answer:
+      "Sim. Essa é justamente a proposta da landing Projeto + Execução: conectar projeto arquitetônico, engenharia, documentação e construção em um único processo.",
+  },
+  {
+    question: "Posso chamar mesmo sem saber quanto quero investir?",
+    answer:
+      "Sim. A conversa inicial serve para entender terreno, expectativas, padrão desejado e próximos passos antes de falar em um orçamento definitivo.",
+  },
+  {
     question: "Preciso já ter projeto pronto?",
     answer:
       "Não. Para a Persona Projeto + Execução, a Antares pode começar desde o projeto arquitetônico e seguir com documentação, engenharia e construção.",

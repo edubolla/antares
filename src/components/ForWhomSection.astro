@@ -1,0 +1,39 @@
+---
+import CtaLink from "./CtaLink.astro";
+import SectionHeader from "./SectionHeader.astro";
+
+const items = [
+  "Comprou ou está comprando um terreno",
+  "Quer construir do zero, não reformar",
+  "Ainda não tem projeto pronto",
+  "Busca um único parceiro para projeto e obra",
+  "Quer entender custos e etapas antes de começar",
+  "Precisa de mais segurança para tomar decisões",
+];
+---
+
+<section class="section-padding bg-antares-soft">
+  <div class="container-page grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+    <div>
+      <SectionHeader
+        eyebrow="Para quem é"
+        title="Esta solução é para quem quer construir com direção desde o primeiro passo."
+        description="Se você tem um terreno, mas ainda está tentando entender projeto, documentação, orçamento e obra, a Antares ajuda a organizar o caminho."
+      />
+      <CtaLink
+        label="Quero organizar minha construção"
+        message="Olá, tenho um terreno e quero organizar os próximos passos da minha construção."
+        class="mt-8"
+      />
+    </div>
+
+    <div class="grid gap-3 sm:grid-cols-2">
+      {items.map((item) => (
+        <div class="rounded-3xl border border-antares-line bg-white p-5">
+          <span class="mb-4 flex h-9 w-9 items-center justify-center rounded-full bg-antares-blue/10 text-antares-blue">✓</span>
+          <p class="font-semibold text-antares-navy">{item}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
