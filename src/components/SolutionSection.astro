@@ -2,6 +2,21 @@
 import CtaLink from "./CtaLink.astro";
 import SectionHeader from "./SectionHeader.astro";
 import { images } from "../data/landing";
+
+const pillars = [
+  {
+    title: "Projeto",
+    description: "A planta nasce conectada ao terreno, à rotina da família e à viabilidade da obra.",
+  },
+  {
+    title: "Documentação",
+    description: "As aprovações e pontos técnicos entram no processo antes de virarem atraso.",
+  },
+  {
+    title: "Construção",
+    description: "A execução segue o que foi planejado, com acompanhamento profissional.",
+  },
+];
 ---
 
 <section class="section-padding bg-antares-navy text-white">
@@ -19,18 +34,23 @@ import { images } from "../data/landing";
       <SectionHeader
         eyebrow="Solução integrada"
         title="Um único parceiro para planejar, aprovar e construir sua casa."
-        description="A Antares centraliza projeto, engenharia, documentação e execução para que você acompanhe tudo com mais clareza, previsibilidade e segurança."
+        description="Em vez de coordenar arquiteto, engenheiro, documentação e obra separadamente, você tem uma equipe conduzindo o processo completo com método e acompanhamento."
         tone="dark"
       />
       <div class="mt-8 grid gap-4 sm:grid-cols-3">
-        {["Projeto", "Documentação", "Construção"].map((item) => (
+        {pillars.map((item) => (
           <div class="rounded-3xl border border-white/10 bg-white/5 p-5">
-            <p class="font-semibold text-white">{item}</p>
-            <p class="mt-2 text-sm leading-6 text-white/70">Conectado em um processo único.</p>
+            <p class="font-semibold text-white">{item.title}</p>
+            <p class="mt-2 text-sm leading-6 text-white/70">{item.description}</p>
           </div>
         ))}
       </div>
-      <CtaLink label="Falar com a Antares" variant="light" class="mt-8" />
+      <CtaLink
+        label="Falar sobre meu terreno"
+        message="Olá, tenho um terreno e quero falar com a Antares sobre projeto, documentação e construção."
+        variant="light"
+        class="mt-8"
+      />
     </div>
   </div>
 </section>

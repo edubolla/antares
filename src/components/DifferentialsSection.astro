@@ -10,7 +10,7 @@ import { differentials, images } from "../data/landing";
       <SectionHeader
         eyebrow="Diferenciais"
         title="Menos improviso. Mais controle sobre a sua construção."
-        description="Planejamento, transparência, cronograma, gestão completa e comunicação constante para você tomar decisões com segurança."
+        description="Para quem nunca construiu, o maior risco é decidir no escuro. A Antares organiza planejamento, cronograma, documentação e execução para dar mais previsibilidade."
       />
       <div class="mt-8 grid gap-4">
         {differentials.map((item) => (
@@ -20,14 +20,26 @@ import { differentials, images } from "../data/landing";
           </article>
         ))}
       </div>
-      <CtaLink label="Quero construir com previsibilidade" class="mt-8" />
+      <CtaLink
+        label="Quero construir com previsibilidade"
+        message="Olá, quero construir minha casa com mais planejamento, previsibilidade e acompanhamento profissional."
+        class="mt-8"
+      />
     </div>
 
-    <img
-      src={images.detail}
-      alt="Acabamento interno premium executado em residência"
-      class="aspect-[4/5] w-full rounded-[2rem] object-cover shadow-premium"
-      loading="lazy"
-    />
+    <div class="relative">
+      <img
+        src={images.detail}
+        alt="Acabamento interno premium executado em residência"
+        class="aspect-[4/5] w-full rounded-[2rem] object-cover shadow-premium"
+        loading="lazy"
+      />
+      <div class="mt-4 rounded-[2rem] bg-antares-navy p-6 text-white lg:absolute lg:bottom-6 lg:left-6 lg:right-6 lg:mt-0">
+        <p class="text-sm font-semibold uppercase tracking-[0.18em] text-white/60">O que isso muda</p>
+        <p class="mt-3 text-xl font-semibold tracking-[-0.03em]">
+          Você toma decisões com orientação técnica, não no improviso da obra.
+        </p>
+      </div>
+    </div>
   </div>
 </section>

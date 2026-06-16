@@ -1,7 +1,7 @@
 export const whatsappNumber = "5551999747745";
 export const whatsappLabel = "(51) 99974-7745";
 
-export function whatsappUrl(message = "Olá, gostaria de solicitar um orçamento para projeto e execução da minha casa.") {
+export function whatsappUrl(message = "Olá, comprei um terreno e gostaria de entender como funciona o projeto e a execução da minha casa.") {
   return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 }
 
@@ -29,12 +29,30 @@ export const images = {
 };
 
 export const processSteps = [
-  "Diagnóstico do terreno e necessidades",
-  "Projeto arquitetônico",
-  "Engenharia e documentação",
-  "Orçamento e planejamento",
-  "Execução com acompanhamento técnico",
-  "Entrega da obra",
+  {
+    title: "Diagnóstico do terreno e necessidades",
+    description: "Entendemos seu momento, terreno, rotina da família e principais dúvidas antes de propor qualquer caminho.",
+  },
+  {
+    title: "Projeto arquitetônico",
+    description: "Transformamos suas prioridades em uma planta funcional, viável e alinhada ao que você quer construir.",
+  },
+  {
+    title: "Engenharia e documentação",
+    description: "Organizamos os pontos técnicos e aprovações para reduzir riscos antes da obra começar.",
+  },
+  {
+    title: "Orçamento e planejamento",
+    description: "Você enxerga etapas, custos e decisões importantes com mais clareza antes de assumir a construção.",
+  },
+  {
+    title: "Execução com acompanhamento técnico",
+    description: "A obra é conduzida por uma equipe profissional, com comunicação e acompanhamento durante o processo.",
+  },
+  {
+    title: "Entrega da obra",
+    description: "A conclusão vem com orientação final para você receber a casa com mais segurança e tranquilidade.",
+  },
 ];
 
 export const differentials = [
@@ -83,22 +101,22 @@ export const testimonials = [
   {
     name: "Fernanda Vargas",
     quote:
-      "A empresa é maravilhosa, somente agradecer por fazerem parte da nossa história e da realização do nosso sonho. Profissionais sérios, sempre prestativos e atenciosos, com foco nas soluções. Empresa séria e comprometida com o cliente.",
+      "Profissionais sérios, sempre prestativos e atenciosos, com foco nas soluções.",
   },
   {
     name: "Carlos Gonçalves",
     quote:
-      "Equipe profissional e atenta as necessidades dos clientes. Tínhamos um projeto difícil em mãos e mesmo assim tornaram a execução fácil e rápida.",
+      "Tínhamos um projeto difícil em mãos e mesmo assim tornaram a execução fácil e rápida.",
   },
   {
     name: "Luiz Carlos Bertol Júnior",
     quote:
-      "Empresa séria, cumpriu com nosso projeto e muito prestativa e resiliente quanto as demandas. Fizeram tudo com qualidade e no prazo, podem confiar. Parabéns ao Guilherme, Giordano e toda a equipe Antares.",
+      "Cumpriu com nosso projeto. Fizeram tudo com qualidade e no prazo, podem confiar.",
   },
   {
     name: "Márcia Vieira de Lima",
     quote:
-      "Construíram minha casa no ano passado aqui em Novo Hamburgo. Comecei com uma consulta simples, depois visitei algumas obra e por fim aprovei o orçamento da construção. Também optei por fazer o projeto com a construtora na qual compreendeu minhas necessidades e fizeram diversos ajustes na planta. Gostei do atendimento, estou indicando aos conhecidos. Recebi também um Manual do Proprietário na conclusão da obra.",
+      "Comecei com uma consulta simples, visitei algumas obras e aprovei o orçamento. Também fiz o projeto com a construtora, que compreendeu minhas necessidades.",
   },
 ];
 
@@ -106,17 +124,17 @@ export const faqs = [
   {
     question: "Quanto custa construir uma casa?",
     answer:
-      "Depende do terreno, metragem, padrão de acabamento, projeto e escopo da obra. A Antares avalia o cenário para orientar um orçamento mais realista.",
+      "Depende do terreno, metragem, padrão de acabamento, projeto e escopo da obra. O primeiro passo é entender seu objetivo para montar uma estimativa realista, sem chute genérico.",
   },
   {
     question: "Vocês ajudam com financiamento?",
     answer:
-      "A equipe pode orientar a conversa inicial sobre documentação e etapas necessárias para viabilizar a construção com mais previsibilidade.",
+      "A equipe orienta as etapas iniciais de documentação e planejamento para que você entenda o que precisa organizar antes de avançar com a construção.",
   },
   {
     question: "Quanto tempo leva?",
     answer:
-      "O prazo varia conforme projeto, aprovação documental e complexidade da obra. O objetivo é definir um cronograma antes da execução começar.",
+      "O prazo varia conforme projeto, aprovação documental e complexidade da obra. A proposta é definir um cronograma antes da execução começar, para evitar promessas vagas.",
   },
   {
     question: "Posso acompanhar a obra?",
@@ -127,6 +145,11 @@ export const faqs = [
     question: "Vocês cuidam da documentação?",
     answer:
       "Sim. A Antares atua com projeto, engenharia e aprovação documental, além da execução completa da obra.",
+  },
+  {
+    question: "Preciso já ter projeto pronto?",
+    answer:
+      "Não. Para a Persona Projeto + Execução, a Antares pode começar desde o projeto arquitetônico e seguir com documentação, engenharia e construção.",
   },
   {
     question: "Vocês fazem reformas?",

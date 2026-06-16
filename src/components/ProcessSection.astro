@@ -10,27 +10,31 @@ import { images, processSteps } from "../data/landing";
       <SectionHeader
         eyebrow="Como funciona"
         title="Você entende cada etapa antes da obra começar."
-        description="Do primeiro atendimento ao acompanhamento da construção, o processo é organizado para reduzir improvisos, dúvidas e decisões de última hora."
+        description="A construção fica menos assustadora quando você sabe o que vem primeiro, quem resolve cada etapa e quais decisões precisam ser tomadas antes da obra."
       />
       <div class="flex lg:justify-end">
-        <CtaLink label="Entender meu projeto" />
+        <CtaLink
+          label="Quero entender as etapas"
+          message="Olá, quero entender as etapas para construir minha casa, desde o projeto até a execução."
+        />
       </div>
     </div>
 
     <div class="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
       {processSteps.map((step, index) => (
-        <div class="premium-card p-6">
-          <span class="flex h-11 w-11 items-center justify-center rounded-full bg-antares-navy text-sm font-semibold text-white">
+        <div class="premium-card p-5 sm:p-6">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-antares-navy text-sm font-semibold text-white">
             {String(index + 1).padStart(2, "0")}
           </span>
-          <h3 class="mt-6 text-xl font-semibold tracking-[-0.03em] text-antares-navy">{step}</h3>
+          <h3 class="mt-5 text-lg font-semibold tracking-[-0.03em] text-antares-navy sm:text-xl">{step.title}</h3>
+          <p class="mt-3 text-sm leading-6 text-antares-muted">{step.description}</p>
         </div>
       ))}
     </div>
 
     <div class="mt-12 grid gap-4 lg:grid-cols-[1.2fr_0.8fr]">
       <img src={images.process} alt="Projeto residencial em etapa de planejamento" class="h-full min-h-80 rounded-[2rem] object-cover shadow-premium" loading="lazy" />
-      <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-1">
+      <div class="hidden gap-4 md:grid md:grid-cols-2 lg:grid-cols-1">
         <img src={images.processWork} alt="Alvenaria residencial em execução" class="h-64 w-full rounded-[2rem] object-cover" loading="lazy" />
         <img src={images.processInterior} alt="Interior residencial em etapa de obra" class="h-64 w-full rounded-[2rem] object-cover" loading="lazy" />
       </div>

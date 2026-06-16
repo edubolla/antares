@@ -10,8 +10,8 @@ import { images, testimonials } from "../data/landing";
       <div>
         <SectionHeader
           eyebrow="Depoimentos"
-          title="Quem construiu com a Antares destaca segurança, atendimento e entrega."
-          description="Depoimentos reais de clientes que confiaram à Antares o projeto, a execução ou a construção completa da casa."
+          title="Clientes reais reforçam o que mais importa: confiança para construir."
+          description="Os relatos destacam atendimento, solução de problemas, cumprimento do projeto, prazo e cuidado com as necessidades da família."
         />
         <img
           src={images.testimonial}
@@ -21,14 +21,20 @@ import { images, testimonials } from "../data/landing";
         />
       </div>
 
-      <div class="grid gap-4">
+      <div class="grid gap-4 sm:grid-cols-2">
         {testimonials.map((testimonial) => (
           <blockquote class="rounded-[2rem] border border-antares-line bg-antares-soft p-6">
-            <p class="text-lg leading-8 text-antares-ink">"{testimonial.quote}"</p>
+            <p class="text-base leading-7 text-antares-ink sm:text-lg sm:leading-8">"{testimonial.quote}"</p>
             <footer class="mt-5 font-semibold text-antares-navy">{testimonial.name}</footer>
           </blockquote>
         ))}
-        <CtaLink label="Quero conversar com a equipe" class="mt-2" />
+        <div class="sm:col-span-2">
+          <CtaLink
+            label="Quero conversar com a equipe"
+            message="Olá, vi os depoimentos e gostaria de conversar com a equipe Antares sobre minha construção."
+            class="mt-2"
+          />
+        </div>
       </div>
     </div>
   </div>

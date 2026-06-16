@@ -17,8 +17,8 @@ const pains = [
     <div>
       <SectionHeader
         eyebrow="O desafio"
-        title="Construir uma casa parece simples, até você descobrir tudo que precisa coordenar."
-        description="Projeto, aprovação, orçamento, fornecedores, cronograma e obra. Para quem nunca construiu, cada etapa pode virar uma fonte de dúvida, atraso e custo extra."
+        title="“Não faço ideia de como construir uma casa.”"
+        description="Essa é a dúvida de muitos casais depois de comprar o terreno. Projeto, aprovação, orçamento, fornecedores, cronograma e obra precisam funcionar juntos para o sonho não virar uma sequência de problemas."
       />
       <div class="mt-8 grid gap-3">
         {pains.map((pain) => (
@@ -28,14 +28,28 @@ const pains = [
           </div>
         ))}
       </div>
-      <CtaLink label="Quero construir com orientação profissional" class="mt-8" />
+      <CtaLink
+        label="Quero orientação para começar"
+        message="Olá, comprei ou estou comprando um terreno e preciso de orientação para começar a construir."
+        class="mt-8"
+      />
     </div>
 
-    <img
-      src={images.pain}
-      alt="Etapa inicial de obra residencial com fundação em execução"
-      class="aspect-[4/3] w-full rounded-[2rem] object-cover shadow-premium"
-      loading="lazy"
-    />
+    <div class="relative">
+      <img
+        src={images.pain}
+        alt="Etapa inicial de obra residencial com fundação em execução"
+        class="aspect-[4/3] w-full rounded-[2rem] object-cover shadow-premium"
+        loading="lazy"
+      />
+      <div class="mt-4 rounded-[2rem] border border-antares-line bg-antares-soft p-6 lg:absolute lg:bottom-6 lg:left-6 lg:right-6 lg:mt-0 lg:bg-white/95 lg:backdrop-blur">
+        <p class="text-lg font-semibold tracking-[-0.03em] text-antares-navy">
+          Você não precisa coordenar tudo sozinho.
+        </p>
+        <p class="mt-2 leading-7 text-antares-muted">
+          A ideia é sair da dúvida inicial com um plano claro para projeto, documentação e obra.
+        </p>
+      </div>
+    </div>
   </div>
 </section>
