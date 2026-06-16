@@ -1,0 +1,32 @@
+---
+import CtaLink from "../CtaLink.astro";
+import SectionHeader from "../SectionHeader.astro";
+import { executionMessages, projectAnalysisSteps } from "../../data/execucaoObra";
+---
+
+<section class="section-padding bg-white">
+  <div class="container-page">
+    <div class="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
+      <SectionHeader
+        eyebrow="Análise do projeto"
+        title="O que acontece depois que você envia o projeto."
+        description="O objetivo do primeiro contato é entender o escopo da obra e orientar o próximo passo com mais clareza antes de falar em execução."
+      />
+      <div class="flex lg:justify-end">
+        <CtaLink label="Enviar projeto para análise" message={executionMessages.projectAnalysis} />
+      </div>
+    </div>
+
+    <div class="mt-12 grid gap-4 md:grid-cols-3">
+      {projectAnalysisSteps.map((step, index) => (
+        <article class="premium-card p-6">
+          <span class="text-sm font-semibold uppercase tracking-[0.18em] text-antares-blue">
+            Etapa {String(index + 1).padStart(2, "0")}
+          </span>
+          <h3 class="mt-4 text-xl font-semibold tracking-[-0.03em] text-antares-navy">{step.title}</h3>
+          <p class="mt-3 leading-7 text-antares-muted">{step.description}</p>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

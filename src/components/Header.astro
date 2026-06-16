@@ -1,6 +1,18 @@
 ---
 import CtaLink from "./CtaLink.astro";
 import { images, navigation } from "../data/landing";
+
+interface Props {
+  navItems?: typeof navigation;
+  ctaLabel?: string;
+  ctaMessage?: string;
+}
+
+const {
+  navItems = navigation,
+  ctaLabel = "Falar no WhatsApp",
+  ctaMessage = "Olá, comprei um terreno e quero entender como a Antares pode me ajudar com projeto e execução.",
+} = Astro.props;
 ---
 
 <header class="sticky top-0 z-40 border-b border-white/70 bg-white/90 backdrop-blur-xl">
@@ -10,7 +22,7 @@ import { images, navigation } from "../data/landing";
     </a>
 
     <nav class="hidden items-center gap-8 text-sm font-medium text-antares-muted lg:flex">
-      {navigation.map((item) => (
+      {navItems.map((item) => (
         <a href={item.href} class="transition hover:text-antares-blue">
           {item.label}
         </a>
@@ -18,8 +30,8 @@ import { images, navigation } from "../data/landing";
     </nav>
 
     <CtaLink
-      label="Falar no WhatsApp"
-      message="Olá, comprei um terreno e quero entender como a Antares pode me ajudar com projeto e execução."
+      label={ctaLabel}
+      message={ctaMessage}
       class="hidden sm:inline-flex"
     />
   </div>

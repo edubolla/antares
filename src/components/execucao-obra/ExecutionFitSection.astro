@@ -1,0 +1,53 @@
+---
+import CtaLink from "../CtaLink.astro";
+import SectionHeader from "../SectionHeader.astro";
+import { executionMessages } from "../../data/execucaoObra";
+
+const idealFit = [
+  "Você já tem projeto arquitetônico residencial",
+  "Você quer contratar a execução da obra",
+  "Você busca acompanhamento técnico e comunicação clara",
+];
+
+const notFit = [
+  "Você procura reforma ou pequenos reparos",
+  "Você quer apenas referências iniciais de inspiração",
+  "Você ainda não sabe se vai construir",
+];
+---
+
+<section class="section-padding bg-white">
+  <div class="container-page grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+    <SectionHeader
+      eyebrow="Qualificação"
+      title="Esta página é para quem já decidiu construir e precisa contratar a execução."
+      description="A Antares atende construção residencial e execução completa de obras. Não realizamos reformas."
+    />
+
+    <div class="grid gap-4 md:grid-cols-2">
+      <article class="rounded-[2rem] border border-antares-line bg-antares-soft p-6">
+        <h3 class="text-xl font-semibold tracking-[-0.03em] text-antares-navy">Faz sentido se</h3>
+        <div class="mt-5 grid gap-3">
+          {idealFit.map((item) => (
+            <p class="rounded-2xl bg-white p-4 font-medium text-antares-navy">{item}</p>
+          ))}
+        </div>
+      </article>
+
+      <article class="rounded-[2rem] border border-antares-line bg-white p-6">
+        <h3 class="text-xl font-semibold tracking-[-0.03em] text-antares-navy">Não é o melhor caminho se</h3>
+        <div class="mt-5 grid gap-3">
+          {notFit.map((item) => (
+            <p class="rounded-2xl bg-antares-soft p-4 font-medium text-antares-muted">{item}</p>
+          ))}
+        </div>
+      </article>
+
+      <CtaLink
+        label="Enviar projeto para análise"
+        message={executionMessages.projectAnalysis}
+        class="md:col-span-2 md:justify-self-start"
+      />
+    </div>
+  </div>
+</section>

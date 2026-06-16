@@ -1,0 +1,55 @@
+---
+import CtaLink from "../CtaLink.astro";
+import SectionHeader from "../SectionHeader.astro";
+import { executionImages, executionMessages, executionProofs, executionTrustPoints } from "../../data/execucaoObra";
+---
+
+<section class="section-padding bg-white">
+  <div class="container-page">
+    <div class="relative overflow-hidden rounded-[2.5rem] bg-antares-navy px-5 py-16 text-white shadow-premium sm:px-8 lg:px-10 lg:py-20">
+      <img
+        src={executionImages.heroAlt}
+        alt="Fachada residencial finalizada usada como prova de obra entregue"
+        class="absolute inset-0 h-full w-full object-cover opacity-20 mix-blend-luminosity"
+        loading="lazy"
+      />
+      <div class="absolute inset-0 bg-gradient-to-br from-antares-navy via-antares-navy/95 to-antares-blue/85"></div>
+
+      <div class="relative z-10">
+        <SectionHeader
+          eyebrow="Confiança na execução"
+          title="Transparência para você acompanhar a evolução da obra."
+          description="A execução não deve ser uma caixa-preta. A Antares trabalha com comunicação clara e acompanhamento técnico para dar mais controle ao cliente."
+          tone="dark"
+          align="center"
+        />
+
+        <div class="mx-auto mt-12 grid max-w-5xl gap-4 md:grid-cols-2 xl:grid-cols-4">
+          {executionTrustPoints.map((point) => (
+            <div class="rounded-[2rem] border border-white/15 bg-white/10 p-6 text-center backdrop-blur">
+              <p class="text-base font-semibold leading-7 text-white">{point}</p>
+            </div>
+          ))}
+        </div>
+
+        <div class="mx-auto mt-8 grid max-w-5xl gap-4 md:grid-cols-3">
+          {executionProofs.map((proof) => (
+            <blockquote class="rounded-[2rem] border border-white/15 bg-white/10 p-6 backdrop-blur">
+              <p class="leading-7 text-white/90">"{proof.quote}"</p>
+              <footer class="mt-5 font-semibold text-white">{proof.name}</footer>
+            </blockquote>
+          ))}
+        </div>
+
+        <div class="mt-10 text-center">
+          <CtaLink
+            label="Conversar pelo WhatsApp"
+            message={executionMessages.default}
+            variant="light"
+            class="mt-2"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

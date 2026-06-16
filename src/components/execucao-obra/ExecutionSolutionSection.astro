@@ -1,0 +1,62 @@
+---
+import CtaLink from "../CtaLink.astro";
+import SectionHeader from "../SectionHeader.astro";
+import { executionImages, executionMessages } from "../../data/execucaoObra";
+
+const pillars = [
+  {
+    title: "Planejamento",
+    description: "A obra começa com análise do projeto, escopo e decisões técnicas relevantes.",
+  },
+  {
+    title: "Gestão",
+    description: "As etapas são organizadas para reduzir improviso, retrabalho e decisões no escuro.",
+  },
+  {
+    title: "Acompanhamento",
+    description: "A execução é acompanhada com comunicação clara sobre avanço e próximos passos.",
+  },
+];
+---
+
+<section class="section-padding bg-antares-navy text-white">
+  <div class="container-page grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+    <div class="grid gap-4">
+      <img
+        src={executionImages.processFoundation}
+        alt="Fundação residencial em etapa inicial de execução"
+        class="aspect-[4/3] w-full rounded-[2rem] object-cover shadow-premium lg:aspect-[4/5]"
+        loading="lazy"
+      />
+      <img
+        src={executionImages.processMasonry}
+        alt="Alvenaria residencial em execução"
+        class="hidden aspect-[16/9] w-full rounded-[2rem] object-cover opacity-90 shadow-premium md:block"
+        loading="lazy"
+      />
+    </div>
+
+    <div>
+      <SectionHeader
+        eyebrow="Execução Antares"
+        title="Execução residencial com planejamento, gestão e acompanhamento técnico."
+        description="A Antares organiza as etapas da obra, acompanha a execução e mantém uma comunicação clara para que o projeto avance com previsibilidade."
+        tone="dark"
+      />
+      <div class="mt-8 grid gap-4 sm:grid-cols-3">
+        {pillars.map((item) => (
+          <div class="rounded-3xl border border-white/10 bg-white/5 p-5">
+            <p class="font-semibold text-white">{item.title}</p>
+            <p class="mt-2 text-sm leading-6 text-white/70">{item.description}</p>
+          </div>
+        ))}
+      </div>
+      <CtaLink
+        label="Falar com a Antares"
+        message={executionMessages.default}
+        variant="light"
+        class="mt-8"
+      />
+    </div>
+  </div>
+</section>

@@ -1,0 +1,35 @@
+---
+import CtaLink from "../CtaLink.astro";
+import SectionHeader from "../SectionHeader.astro";
+import { executionFaqs, executionMessages } from "../../data/execucaoObra";
+---
+
+<section id="faq" class="section-padding bg-antares-soft">
+  <div class="container-page">
+    <SectionHeader
+      eyebrow="Dúvidas"
+      title="Dúvidas de quem já tem projeto e quer contratar a execução."
+      description="Respostas objetivas sobre análise do projeto, orçamento, prazo, acompanhamento da obra e forma de contratação."
+      align="center"
+    />
+
+    <div class="mx-auto mt-12 grid max-w-4xl gap-4">
+      {executionFaqs.map((faq) => (
+        <details class="group rounded-3xl border border-antares-line bg-white p-6">
+          <summary class="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-antares-navy">
+            {faq.question}
+            <span class="text-2xl text-antares-blue transition group-open:rotate-45">+</span>
+          </summary>
+          <p class="mt-4 leading-7 text-antares-muted">{faq.answer}</p>
+        </details>
+      ))}
+    </div>
+
+    <div class="mt-10 text-center">
+      <CtaLink
+        label="Tirar minha dúvida"
+        message={executionMessages.default}
+      />
+    </div>
+  </div>
+</section>

@@ -1,6 +1,18 @@
 ---
 import CtaLink from "./CtaLink.astro";
 import { contact, images, whatsappLabel } from "../data/landing";
+
+interface Props {
+  description?: string;
+  ctaLabel?: string;
+  ctaMessage?: string;
+}
+
+const {
+  description = "Construção residencial, projeto, engenharia, documentação e execução completa em Canoas e região.",
+  ctaLabel = "Chamar no WhatsApp",
+  ctaMessage,
+} = Astro.props;
 ---
 
 <footer class="bg-antares-navy py-12 text-white">
@@ -9,7 +21,7 @@ import { contact, images, whatsappLabel } from "../data/landing";
       <div>
         <img src={images.logoWhite} alt="Antares Construtora" class="h-12 w-auto" />
         <p class="mt-6 max-w-md leading-7 text-white/70">
-          Construção residencial, projeto, engenharia, documentação e execução completa em Canoas e região.
+          {description}
         </p>
       </div>
 
@@ -25,7 +37,7 @@ import { contact, images, whatsappLabel } from "../data/landing";
           <a href={contact.facebook} target="_blank" rel="noopener noreferrer" class="transition hover:text-white">Facebook</a>
           <p>WhatsApp: {whatsappLabel}</p>
         </div>
-        <CtaLink label="Chamar no WhatsApp" variant="light" class="mt-6" />
+        <CtaLink label={ctaLabel} message={ctaMessage} variant="light" class="mt-6" />
       </div>
     </div>
 

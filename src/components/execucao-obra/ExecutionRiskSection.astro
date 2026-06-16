@@ -1,0 +1,47 @@
+---
+import CtaLink from "../CtaLink.astro";
+import SectionHeader from "../SectionHeader.astro";
+import { executionImages, executionMessages, executionRisks } from "../../data/execucaoObra";
+---
+
+<section id="execucao" class="section-padding bg-white">
+  <div class="container-page grid gap-12 lg:grid-cols-2 lg:items-stretch">
+    <div>
+      <SectionHeader
+        eyebrow="Projeto pronto"
+        title="Com o projeto definido, a escolha da construtora define o resultado da obra."
+        description="A execução precisa respeitar o que foi planejado, controlar etapas, reduzir imprevistos e manter você informado durante todo o processo."
+      />
+      <div class="mt-8 grid gap-3">
+        {executionRisks.map((risk) => (
+          <div class="flex items-center gap-3 rounded-2xl border border-antares-line bg-white p-4">
+            <span class="h-2.5 w-2.5 rounded-full bg-antares-blue"></span>
+            <span class="font-medium text-antares-navy">{risk}</span>
+          </div>
+        ))}
+      </div>
+      <CtaLink
+        label="Analisar minha obra com a Antares"
+        message={executionMessages.projectAnalysis}
+        class="mt-8"
+      />
+    </div>
+
+    <div class="relative min-h-[420px] lg:min-h-0">
+      <img
+        src={executionImages.processStructure}
+        alt="Fundação residencial em execução com estrutura inicial"
+        class="h-full min-h-[420px] w-full rounded-[2rem] object-cover shadow-premium"
+        loading="lazy"
+      />
+      <div class="mt-4 rounded-[2rem] border border-antares-line bg-antares-soft p-6 lg:absolute lg:bottom-6 lg:left-6 lg:right-6 lg:mt-0 lg:bg-white/95 lg:backdrop-blur">
+        <p class="text-lg font-semibold tracking-[-0.03em] text-antares-navy">
+          Uma boa obra depende de uma execução bem conduzida.
+        </p>
+        <p class="mt-2 leading-7 text-antares-muted">
+          O controle técnico começa antes da primeira etapa em campo e segue durante a evolução da construção.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

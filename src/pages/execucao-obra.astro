@@ -1,0 +1,50 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import FloatingWhatsApp from "../components/FloatingWhatsApp.astro";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import MobileStickyCta from "../components/MobileStickyCta.astro";
+import ExecutionDifferentialsSection from "../components/execucao-obra/ExecutionDifferentialsSection.astro";
+import ExecutionFaqSection from "../components/execucao-obra/ExecutionFaqSection.astro";
+import ExecutionFinalCta from "../components/execucao-obra/ExecutionFinalCta.astro";
+import ExecutionFitSection from "../components/execucao-obra/ExecutionFitSection.astro";
+import ExecutionHero from "../components/execucao-obra/ExecutionHero.astro";
+import ExecutionPortfolioSection from "../components/execucao-obra/ExecutionPortfolioSection.astro";
+import ExecutionProcessSection from "../components/execucao-obra/ExecutionProcessSection.astro";
+import ExecutionRiskSection from "../components/execucao-obra/ExecutionRiskSection.astro";
+import ExecutionSolutionSection from "../components/execucao-obra/ExecutionSolutionSection.astro";
+import ExecutionTrustSection from "../components/execucao-obra/ExecutionTrustSection.astro";
+import ProjectAnalysisSection from "../components/execucao-obra/ProjectAnalysisSection.astro";
+import { executionMessages, executionNavigation } from "../data/execucaoObra";
+---
+
+<BaseLayout
+  title="Antares Construtora | Execução de Obra Residencial em Canoas"
+  description="Já tem o projeto da sua casa? A Antares executa obras residenciais com planejamento, transparência e acompanhamento técnico em Canoas e região."
+>
+  <Header
+    navItems={executionNavigation}
+    ctaLabel="Enviar projeto"
+    ctaMessage={executionMessages.projectAnalysis}
+  />
+  <main>
+    <ExecutionHero />
+    <ProjectAnalysisSection />
+    <ExecutionRiskSection />
+    <ExecutionSolutionSection />
+    <ExecutionProcessSection />
+    <ExecutionDifferentialsSection />
+    <ExecutionPortfolioSection />
+    <ExecutionTrustSection />
+    <ExecutionFitSection />
+    <ExecutionFaqSection />
+    <ExecutionFinalCta />
+  </main>
+  <Footer
+    description="Execução de obras residenciais, engenharia, documentação e construção completa em Canoas e região."
+    ctaLabel="Enviar projeto"
+    ctaMessage={executionMessages.projectAnalysis}
+  />
+  <FloatingWhatsApp message={executionMessages.projectAnalysis} hideOnMobile showLabel />
+  <MobileStickyCta label="Enviar projeto para análise" message={executionMessages.projectAnalysis} />
+</BaseLayout>

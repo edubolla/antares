@@ -1,0 +1,35 @@
+---
+import CtaLink from "../CtaLink.astro";
+import { executionImages, executionMessages } from "../../data/execucaoObra";
+---
+
+<section class="bg-white py-8">
+  <div class="container-page">
+    <div class="relative overflow-hidden rounded-[2.5rem] bg-antares-navy p-6 text-white shadow-premium sm:p-10 lg:p-16">
+      <div class="grid gap-10 lg:grid-cols-[1fr_0.8fr] lg:items-center">
+        <div class="relative z-10">
+          <p class="eyebrow mb-4">Próximo passo</p>
+          <h2 class="max-w-3xl text-4xl font-semibold tracking-[-0.05em] sm:text-5xl lg:text-6xl">
+            Seu projeto está pronto para ser analisado?
+          </h2>
+          <p class="mt-6 max-w-2xl text-lg leading-8 text-white/75">
+            Envie seu projeto para a Antares avaliar a execução da obra com planejamento, transparência e acompanhamento técnico.
+          </p>
+          <CtaLink
+            label="Enviar projeto para análise"
+            message={executionMessages.projectAnalysis}
+            variant="light"
+            class="mt-8"
+          />
+        </div>
+
+        <img
+          src={executionImages.finalCta}
+          alt="Casa residencial pronta com fachada entregue"
+          class="relative z-10 aspect-[4/5] w-full rounded-[2rem] object-cover"
+          loading="lazy"
+        />
+      </div>
+    </div>
+  </div>
+</section>

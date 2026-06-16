@@ -1,0 +1,15 @@
+---
+import CtaLink from "./CtaLink.astro";
+
+interface Props {
+  label: string;
+  message?: string;
+}
+
+const { label, message } = Astro.props;
+---
+
+<div class="fixed inset-x-0 bottom-0 z-50 border-t border-antares-line bg-white/95 p-3 shadow-premium backdrop-blur md:hidden">
+  <CtaLink label={label} message={message} class="w-full" />
+</div>
+<div class="h-20 md:hidden" aria-hidden="true"></div>
