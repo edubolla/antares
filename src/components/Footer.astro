@@ -1,0 +1,36 @@
+---
+import CtaLink from "./CtaLink.astro";
+import { contact, images, whatsappLabel } from "../data/landing";
+---
+
+<footer class="bg-antares-navy py-12 text-white">
+  <div class="container-page">
+    <div class="grid gap-10 lg:grid-cols-[1.1fr_0.9fr_0.8fr]">
+      <div>
+        <img src={images.logoWhite} alt="Antares Construtora" class="h-12 w-auto" />
+        <p class="mt-6 max-w-md leading-7 text-white/70">
+          Construção residencial, projeto, engenharia, documentação e execução completa em Canoas e região.
+        </p>
+      </div>
+
+      <div>
+        <h2 class="text-lg font-semibold">Endereço</h2>
+        <p class="mt-4 leading-7 text-white/70">{contact.address}</p>
+      </div>
+
+      <div>
+        <h2 class="text-lg font-semibold">Contato</h2>
+        <div class="mt-4 grid gap-3 text-white/70">
+          <a href={contact.instagram} target="_blank" rel="noopener noreferrer" class="transition hover:text-white">Instagram</a>
+          <a href={contact.facebook} target="_blank" rel="noopener noreferrer" class="transition hover:text-white">Facebook</a>
+          <p>WhatsApp: {whatsappLabel}</p>
+        </div>
+        <CtaLink label="Chamar no WhatsApp" variant="light" class="mt-6" />
+      </div>
+    </div>
+
+    <div class="mt-10 border-t border-white/10 pt-6 text-sm text-white/50">
+      © {new Date().getFullYear()} Antares Construtora. Todos os direitos reservados.
+    </div>
+  </div>
+</footer>

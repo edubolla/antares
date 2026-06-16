@@ -1,0 +1,41 @@
+---
+import CtaLink from "./CtaLink.astro";
+import SectionHeader from "./SectionHeader.astro";
+import { images } from "../data/landing";
+
+const pains = [
+  "Gastar além do previsto",
+  "Contratar profissionais errados",
+  "Atrasos na obra",
+  "Problemas com documentação",
+  "Coordenar vários fornecedores",
+];
+---
+
+<section class="section-padding bg-white">
+  <div class="container-page grid gap-12 lg:grid-cols-2 lg:items-center">
+    <div>
+      <SectionHeader
+        eyebrow="O desafio"
+        title="Construir uma casa parece simples, até você descobrir tudo que precisa coordenar."
+        description="Projeto, aprovação, orçamento, fornecedores, cronograma e obra. Para quem nunca construiu, cada etapa pode virar uma fonte de dúvida, atraso e custo extra."
+      />
+      <div class="mt-8 grid gap-3">
+        {pains.map((pain) => (
+          <div class="flex items-center gap-3 rounded-2xl border border-antares-line bg-white p-4">
+            <span class="h-2.5 w-2.5 rounded-full bg-antares-blue"></span>
+            <span class="font-medium text-antares-navy">{pain}</span>
+          </div>
+        ))}
+      </div>
+      <CtaLink label="Quero construir com orientação profissional" class="mt-8" />
+    </div>
+
+    <img
+      src={images.pain}
+      alt="Etapa inicial de obra residencial com fundação em execução"
+      class="aspect-[4/3] w-full rounded-[2rem] object-cover shadow-premium"
+      loading="lazy"
+    />
+  </div>
+</section>

@@ -1,0 +1,27 @@
+---
+import { whatsappUrl } from "../data/landing";
+
+interface Props {
+  label: string;
+  message?: string;
+  variant?: "primary" | "secondary" | "light";
+  class?: string;
+}
+
+const { label, message, variant = "primary", class: className = "" } = Astro.props;
+
+const variants = {
+  primary: "bg-antares-blue text-white hover:bg-antares-navy",
+  secondary: "border border-antares-line bg-white text-antares-navy hover:border-antares-blue hover:text-antares-blue",
+  light: "bg-white text-antares-navy hover:bg-antares-soft",
+};
+---
+
+<a
+  href={whatsappUrl(message)}
+  target="_blank"
+  rel="noopener noreferrer"
+  class={`inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold transition duration-200 ${variants[variant]} ${className}`}
+>
+  {label}
+</a>

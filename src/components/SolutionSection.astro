@@ -1,0 +1,36 @@
+---
+import CtaLink from "./CtaLink.astro";
+import SectionHeader from "./SectionHeader.astro";
+import { images } from "../data/landing";
+---
+
+<section class="section-padding bg-antares-navy text-white">
+  <div class="container-page grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+    <div class="overflow-hidden rounded-[2rem] bg-white/5 p-3">
+      <img
+        src={images.solution}
+        alt="Projeto residencial usado no planejamento de construção"
+        class="aspect-[4/5] w-full rounded-[1.5rem] object-cover"
+        loading="lazy"
+      />
+    </div>
+
+    <div>
+      <SectionHeader
+        eyebrow="Solução integrada"
+        title="Um único parceiro para planejar, aprovar e construir sua casa."
+        description="A Antares centraliza projeto, engenharia, documentação e execução para que você acompanhe tudo com mais clareza, previsibilidade e segurança."
+        tone="dark"
+      />
+      <div class="mt-8 grid gap-4 sm:grid-cols-3">
+        {["Projeto", "Documentação", "Construção"].map((item) => (
+          <div class="rounded-3xl border border-white/10 bg-white/5 p-5">
+            <p class="font-semibold text-white">{item}</p>
+            <p class="mt-2 text-sm leading-6 text-white/70">Conectado em um processo único.</p>
+          </div>
+        ))}
+      </div>
+      <CtaLink label="Falar com a Antares" variant="light" class="mt-8" />
+    </div>
+  </div>
+</section>

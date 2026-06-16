@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-white font-sans text-antares-ink antialiased;
+}
+
+::selection {
+  @apply bg-antares-blue text-white;
+}
+
+img {
+  @apply max-w-full;
+}
+
+.container-page {
+  @apply mx-auto w-full max-w-7xl px-5 sm:px-6 lg:px-8;
+}
+
+.section-padding {
+  @apply py-20 sm:py-24 lg:py-32;
+}
+
+.eyebrow {
+  @apply text-sm font-semibold uppercase tracking-[0.2em] text-antares-blue;
+}
+
+.premium-card {
+  @apply rounded-[2rem] border border-antares-line bg-white shadow-premium;
+}

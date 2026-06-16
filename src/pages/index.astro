@@ -1,0 +1,35 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import DifferentialsSection from "../components/DifferentialsSection.astro";
+import FaqSection from "../components/FaqSection.astro";
+import FinalCta from "../components/FinalCta.astro";
+import FloatingWhatsApp from "../components/FloatingWhatsApp.astro";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import Hero from "../components/Hero.astro";
+import PainSection from "../components/PainSection.astro";
+import PortfolioSection from "../components/PortfolioSection.astro";
+import ProcessSection from "../components/ProcessSection.astro";
+import SolutionSection from "../components/SolutionSection.astro";
+import TestimonialsSection from "../components/TestimonialsSection.astro";
+---
+
+<BaseLayout
+  title="Antares Construtora | Projeto e Execução de Casas em Canoas"
+  description="Projeto arquitetônico, documentação, engenharia e construção residencial com um único parceiro. Construa com planejamento, transparência e acompanhamento profissional."
+>
+  <Header />
+  <main>
+    <Hero />
+    <PainSection />
+    <SolutionSection />
+    <ProcessSection />
+    <DifferentialsSection />
+    <PortfolioSection />
+    <TestimonialsSection />
+    <FaqSection />
+    <FinalCta />
+  </main>
+  <Footer />
+  <FloatingWhatsApp />
+</BaseLayout>

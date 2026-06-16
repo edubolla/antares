@@ -1,0 +1,39 @@
+---
+import CtaLink from "./CtaLink.astro";
+import SectionHeader from "./SectionHeader.astro";
+import { images, processSteps } from "../data/landing";
+---
+
+<section id="como-funciona" class="section-padding bg-antares-soft">
+  <div class="container-page">
+    <div class="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
+      <SectionHeader
+        eyebrow="Como funciona"
+        title="Você entende cada etapa antes da obra começar."
+        description="Do primeiro atendimento ao acompanhamento da construção, o processo é organizado para reduzir improvisos, dúvidas e decisões de última hora."
+      />
+      <div class="flex lg:justify-end">
+        <CtaLink label="Entender meu projeto" />
+      </div>
+    </div>
+
+    <div class="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      {processSteps.map((step, index) => (
+        <div class="premium-card p-6">
+          <span class="flex h-11 w-11 items-center justify-center rounded-full bg-antares-navy text-sm font-semibold text-white">
+            {String(index + 1).padStart(2, "0")}
+          </span>
+          <h3 class="mt-6 text-xl font-semibold tracking-[-0.03em] text-antares-navy">{step}</h3>
+        </div>
+      ))}
+    </div>
+
+    <div class="mt-12 grid gap-4 lg:grid-cols-[1.2fr_0.8fr]">
+      <img src={images.process} alt="Projeto residencial em etapa de planejamento" class="h-full min-h-80 rounded-[2rem] object-cover shadow-premium" loading="lazy" />
+      <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-1">
+        <img src={images.processWork} alt="Alvenaria residencial em execução" class="h-64 w-full rounded-[2rem] object-cover" loading="lazy" />
+        <img src={images.processInterior} alt="Interior residencial em etapa de obra" class="h-64 w-full rounded-[2rem] object-cover" loading="lazy" />
+      </div>
+    </div>
+  </div>
+</section>

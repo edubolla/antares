@@ -1,0 +1,142 @@
+export const whatsappNumber = "5551999747745";
+export const whatsappLabel = "(51) 99974-7745";
+
+export function whatsappUrl(message = "Olá, gostaria de solicitar um orçamento para projeto e execução da minha casa.") {
+  return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+}
+
+export const navigation = [
+  { label: "Como funciona", href: "#como-funciona" },
+  { label: "Portfólio", href: "#portfolio" },
+  { label: "Depoimentos", href: "#depoimentos" },
+  { label: "Dúvidas", href: "#faq" },
+];
+
+export const images = {
+  logoBlue: "/image/logotipo/logo%20antares%20azul.png",
+  logoWhite: "/image/logotipo/logo%20antares%20branco.png",
+  favicon: "/image/logotipo/favicon.png",
+  hero: "/image/hero/obra%20completa%2000001.webp",
+  heroAlt: "/image/hero/obra%20completa%2000006.webp",
+  pain: "/image/processo/IMG_0903.webp",
+  solution: "/image/processo/projeto%2000002.webp",
+  process: "/image/processo/projeto%2000001.webp",
+  processWork: "/image/processo/IMG_2426.webp",
+  processInterior: "/image/processo/IMG_9965.webp",
+  detail: "/image/portfolio/20251101_152003207_iOS.webp",
+  testimonial: "/image/prova-social/PHOTO-2025-03-25-14-41-09.webp",
+  finalCta: "/image/cta-final/IMG_6765.webp",
+};
+
+export const processSteps = [
+  "Diagnóstico do terreno e necessidades",
+  "Projeto arquitetônico",
+  "Engenharia e documentação",
+  "Orçamento e planejamento",
+  "Execução com acompanhamento técnico",
+  "Entrega da obra",
+];
+
+export const differentials = [
+  {
+    title: "Planejamento antes da obra",
+    description: "As decisões importantes são organizadas antes de virar custo, atraso ou retrabalho.",
+  },
+  {
+    title: "Gestão completa",
+    description: "Projeto, documentação, engenharia e execução conectados por uma única equipe.",
+  },
+  {
+    title: "Acompanhamento profissional",
+    description: "Você acompanha a evolução da obra com clareza, orientação técnica e comunicação constante.",
+  },
+  {
+    title: "Mais previsibilidade",
+    description: "Cronograma, orçamento e etapas bem definidos para reduzir surpresas no caminho.",
+  },
+];
+
+export const portfolioImages = [
+  {
+    src: "/image/portfolio/obra%20completa%2000002.webp",
+    alt: "Ambiente interno finalizado com iluminação e acabamento premium",
+  },
+  {
+    src: "/image/portfolio/obra%20completa%2000004.webp",
+    alt: "Cozinha moderna finalizada com ilha e marcenaria",
+  },
+  {
+    src: "/image/portfolio/obra%20completa%2000005.webp",
+    alt: "Área externa coberta com forro de madeira",
+  },
+  {
+    src: "/image/portfolio/20250807_213918460_iOS.webp",
+    alt: "Banheiro finalizado com revestimento em pedra",
+  },
+  {
+    src: "/image/portfolio/casas%20prontas%2000002.webp",
+    alt: "Fachada residencial moderna concluída",
+  },
+];
+
+export const testimonials = [
+  {
+    name: "Fernanda Vargas",
+    quote:
+      "A empresa é maravilhosa, somente agradecer por fazerem parte da nossa história e da realização do nosso sonho. Profissionais sérios, sempre prestativos e atenciosos, com foco nas soluções. Empresa séria e comprometida com o cliente.",
+  },
+  {
+    name: "Carlos Gonçalves",
+    quote:
+      "Equipe profissional e atenta as necessidades dos clientes. Tínhamos um projeto difícil em mãos e mesmo assim tornaram a execução fácil e rápida.",
+  },
+  {
+    name: "Luiz Carlos Bertol Júnior",
+    quote:
+      "Empresa séria, cumpriu com nosso projeto e muito prestativa e resiliente quanto as demandas. Fizeram tudo com qualidade e no prazo, podem confiar. Parabéns ao Guilherme, Giordano e toda a equipe Antares.",
+  },
+  {
+    name: "Márcia Vieira de Lima",
+    quote:
+      "Construíram minha casa no ano passado aqui em Novo Hamburgo. Comecei com uma consulta simples, depois visitei algumas obra e por fim aprovei o orçamento da construção. Também optei por fazer o projeto com a construtora na qual compreendeu minhas necessidades e fizeram diversos ajustes na planta. Gostei do atendimento, estou indicando aos conhecidos. Recebi também um Manual do Proprietário na conclusão da obra.",
+  },
+];
+
+export const faqs = [
+  {
+    question: "Quanto custa construir uma casa?",
+    answer:
+      "Depende do terreno, metragem, padrão de acabamento, projeto e escopo da obra. A Antares avalia o cenário para orientar um orçamento mais realista.",
+  },
+  {
+    question: "Vocês ajudam com financiamento?",
+    answer:
+      "A equipe pode orientar a conversa inicial sobre documentação e etapas necessárias para viabilizar a construção com mais previsibilidade.",
+  },
+  {
+    question: "Quanto tempo leva?",
+    answer:
+      "O prazo varia conforme projeto, aprovação documental e complexidade da obra. O objetivo é definir um cronograma antes da execução começar.",
+  },
+  {
+    question: "Posso acompanhar a obra?",
+    answer:
+      "Sim. A proposta é manter acompanhamento profissional e comunicação constante durante as etapas da construção.",
+  },
+  {
+    question: "Vocês cuidam da documentação?",
+    answer:
+      "Sim. A Antares atua com projeto, engenharia e aprovação documental, além da execução completa da obra.",
+  },
+  {
+    question: "Vocês fazem reformas?",
+    answer:
+      "Não. A Antares atua com construção residencial, projeto, documentação, engenharia e execução completa.",
+  },
+];
+
+export const contact = {
+  address: "R. Domingos Martins, 121 - Sala 905 - Centro, Canoas - RS, 92010-170",
+  instagram: "https://www.instagram.com/antaresconstrutoracanoas",
+  facebook: "https://www.facebook.com/antaresconstrutoracanoas",
+};

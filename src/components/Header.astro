@@ -1,0 +1,22 @@
+---
+import CtaLink from "./CtaLink.astro";
+import { images, navigation } from "../data/landing";
+---
+
+<header class="sticky top-0 z-40 border-b border-white/70 bg-white/90 backdrop-blur-xl">
+  <div class="container-page flex h-20 items-center justify-between gap-6">
+    <a href="#" aria-label="Antares Construtora">
+      <img src={images.logoBlue} alt="Antares Construtora" class="h-10 w-auto" />
+    </a>
+
+    <nav class="hidden items-center gap-8 text-sm font-medium text-antares-muted lg:flex">
+      {navigation.map((item) => (
+        <a href={item.href} class="transition hover:text-antares-blue">
+          {item.label}
+        </a>
+      ))}
+    </nav>
+
+    <CtaLink label="Falar no WhatsApp" class="hidden sm:inline-flex" />
+  </div>
+</header>

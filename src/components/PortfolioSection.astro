@@ -1,0 +1,32 @@
+---
+import CtaLink from "./CtaLink.astro";
+import SectionHeader from "./SectionHeader.astro";
+import { portfolioImages } from "../data/landing";
+---
+
+<section id="portfolio" class="section-padding bg-antares-navy text-white">
+  <div class="container-page">
+    <div class="grid gap-10 lg:grid-cols-[1fr_auto] lg:items-end">
+      <SectionHeader
+        eyebrow="Portfólio"
+        title="Obras que mostram planejamento na prática."
+        description="Veja projetos e construções residenciais executados com atenção aos detalhes, acabamentos e resultado final."
+        tone="dark"
+      />
+      <CtaLink label="Ver possibilidades para minha casa" variant="light" />
+    </div>
+
+    <div class="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-6">
+      {portfolioImages.map((image, index) => (
+        <figure class={index === 0 ? "sm:col-span-2 lg:col-span-3 lg:row-span-2" : "lg:col-span-3"}>
+          <img
+            src={image.src}
+            alt={image.alt}
+            class="h-full min-h-72 w-full rounded-[2rem] object-cover"
+            loading="lazy"
+          />
+        </figure>
+      ))}
+    </div>
+  </div>
+</section>
