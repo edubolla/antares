@@ -32,11 +32,28 @@ import { images, processSteps } from "../data/landing";
       ))}
     </div>
 
-    <div class="mt-12 grid gap-4 lg:grid-cols-[1.2fr_0.8fr]">
-      <img src={images.process} alt="Projeto residencial em etapa de planejamento" class="h-full min-h-80 rounded-[2rem] object-cover shadow-premium" loading="lazy" />
-      <div class="hidden gap-4 md:grid md:grid-cols-2 lg:grid-cols-1">
-        <img src={images.processWork} alt="Alvenaria residencial em execução" class="h-64 w-full rounded-[2rem] object-cover" loading="lazy" />
-        <img src={images.processInterior} alt="Interior residencial em etapa de obra" class="h-64 w-full rounded-[2rem] object-cover" loading="lazy" />
+    <div class="mt-12 grid gap-4 lg:grid-cols-3">
+      <img
+        src={images.process}
+        alt="Projeto residencial em etapa de planejamento"
+        class="h-80 w-full rounded-[2rem] object-cover shadow-premium lg:h-[420px]"
+        loading="lazy"
+      />
+      <div class="hidden md:block">
+        <img
+          src={images.processFoundation}
+          alt="Fundação residencial em execução"
+          class="h-80 w-full rounded-[2rem] object-cover shadow-premium lg:h-[420px]"
+          loading="lazy"
+        />
+      </div>
+      <div class="hidden md:block">
+        <img
+          src={images.processInterior}
+          alt="Interior residencial em etapa de obra"
+          class="h-80 w-full rounded-[2rem] object-cover shadow-premium lg:h-[420px]"
+          loading="lazy"
+        />
       </div>
     </div>
   </div>
