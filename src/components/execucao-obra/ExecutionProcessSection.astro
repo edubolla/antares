@@ -32,16 +32,7 @@ import { executionImages, executionMessages, executionSteps } from "../../data/e
       ))}
     </div>
 
-    <div class="mt-12 grid gap-4 lg:grid-cols-4">
-      <figure>
-        <img
-          src={executionImages.processFoundation}
-          alt="Fundação de obra residencial em execução"
-          class="h-72 w-full rounded-[2rem] object-cover shadow-premium lg:h-[420px]"
-          loading="lazy"
-        />
-        <figcaption class="mt-3 text-sm font-medium text-antares-muted">Fundação em execução</figcaption>
-      </figure>
+    <div class="mt-12 grid gap-4 lg:grid-cols-3">
       <figure>
         <img
           src={executionImages.processStructure}
@@ -49,9 +40,8 @@ import { executionImages, executionMessages, executionSteps } from "../../data/e
           class="h-72 w-full rounded-[2rem] object-cover shadow-premium lg:h-[420px]"
           loading="lazy"
         />
-        <figcaption class="mt-3 text-sm font-medium text-antares-muted">Estrutura inicial da obra</figcaption>
       </figure>
-      <figure class="hidden md:block">
+      <figure>
         <img
           src={executionImages.processMasonry}
           alt="Alvenaria residencial sendo executada"
@@ -60,7 +50,7 @@ import { executionImages, executionMessages, executionSteps } from "../../data/e
         />
         <figcaption class="mt-3 text-sm font-medium text-antares-muted">Alvenaria em andamento</figcaption>
       </figure>
-      <figure class="hidden md:block">
+      <figure>
         <img
           src={executionImages.processInterior}
           alt="Interior residencial em etapa de obra"
