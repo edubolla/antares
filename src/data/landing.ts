@@ -99,9 +99,44 @@ export const portfolioImages = [
 
 export const visualPortfolioImages = [
   {
-    src: "/image/hero/obra%20completa%2000001.webp",
-    alt: "Fachada residencial moderna com garagem e paisagismo",
+    src: "/image/portfolio/casas%20prontas%2000001.webp",
+    alt: "Fachada residencial pronta com garagem",
+    label: "Fachada",
+  },
+  {
+    src: "/image/portfolio/casas%20prontas%2000002.webp",
+    alt: "Casa residencial moderna finalizada",
     label: "Casa pronta",
+  },
+  {
+    src: "/image/portfolio/casas%20prontas%2000003.webp",
+    alt: "Fachada residencial finalizada pela Antares",
+    label: "Residencial",
+  },
+  {
+    src: "/image/portfolio/casas%20prontas%2000004.webp",
+    alt: "Casa pronta com fachada contemporânea",
+    label: "Entrega",
+  },
+  {
+    src: "/image/portfolio/casas%20prontas%2000005.webp",
+    alt: "Residência concluída com acabamento externo",
+    label: "Projeto",
+  },
+  {
+    src: "/image/portfolio/casas%20prontas%2000006.webp",
+    alt: "Casa térrea finalizada",
+    label: "Obra pronta",
+  },
+  {
+    src: "/image/portfolio/casas%20prontas%2000008.webp",
+    alt: "Fachada residencial pronta em lote urbano",
+    label: "Construção",
+  },
+  {
+    src: "/image/portfolio/casas%20prontas%2000009.webp",
+    alt: "Casa pronta com volumetria moderna",
+    label: "Arquitetura",
   },
   {
     src: "/image/portfolio/obra%20completa%2000002.webp",
@@ -119,29 +154,9 @@ export const visualPortfolioImages = [
     label: "Área externa",
   },
   {
-    src: "/image/hero/obra%20completa%2000006.webp",
-    alt: "Casa moderna com piscina",
-    label: "Entrega",
-  },
-  {
     src: "/image/portfolio/20250807_213918460_iOS.webp",
     alt: "Banheiro com revestimento em pedra",
     label: "Detalhes",
-  },
-  {
-    src: "/image/portfolio/20251101_152003207_iOS.webp",
-    alt: "Ambiente interno com parede de pedra",
-    label: "Materiais",
-  },
-  {
-    src: "/image/portfolio/construtoraelizium_1723776552086.webp",
-    alt: "Cozinha planejada em residência finalizada",
-    label: "Execução",
-  },
-  {
-    src: "/image/portfolio/casas%20prontas%2000002.webp",
-    alt: "Fachada residencial finalizada",
-    label: "Residencial",
   },
 ];
 
