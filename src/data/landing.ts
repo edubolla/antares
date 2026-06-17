@@ -99,9 +99,9 @@ export const portfolioImages = [
 
 export const visualPortfolioImages = [
   {
-    src: "/image/portfolio/casas%20prontas%2000001.webp",
-    alt: "Fachada residencial pronta com garagem",
-    label: "Fachada",
+    src: "/image/portfolio/casas%20prontas%2000008.webp",
+    alt: "Casa pronta com pátio em pedra e fachada contemporânea",
+    label: "Casa pronta",
   },
   {
     src: "/image/portfolio/casas%20prontas%2000002.webp",
@@ -109,9 +109,9 @@ export const visualPortfolioImages = [
     label: "Casa pronta",
   },
   {
-    src: "/image/portfolio/casas%20prontas%2000003.webp",
-    alt: "Fachada residencial finalizada pela Antares",
-    label: "Residencial",
+    src: "/image/portfolio/obra%20completa%2000007.webp",
+    alt: "Interior premium finalizado com iluminação linear",
+    label: "Interiores",
   },
   {
     src: "/image/portfolio/casas%20prontas%2000004.webp",
@@ -129,9 +129,9 @@ export const visualPortfolioImages = [
     label: "Obra pronta",
   },
   {
-    src: "/image/portfolio/casas%20prontas%2000008.webp",
-    alt: "Fachada residencial pronta em lote urbano",
-    label: "Construção",
+    src: "/image/portfolio/casas%20prontas%2000003.webp",
+    alt: "Fachada residencial finalizada pela Antares",
+    label: "Residencial",
   },
   {
     src: "/image/portfolio/casas%20prontas%2000009.webp",
