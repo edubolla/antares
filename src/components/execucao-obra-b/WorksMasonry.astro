@@ -1,0 +1,28 @@
+---
+import { visualGallery } from "../../data/execucaoObraB";
+---
+
+<section id="detalhes" class="section-padding bg-antares-navy text-white">
+  <div class="container-page">
+    <div class="mb-10 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+      <div>
+        <p class="eyebrow mb-4">Obras entregues</p>
+        <h2 class="text-4xl font-semibold tracking-[-0.05em] sm:text-6xl">Detalhes que vendem.</h2>
+      </div>
+      <p class="max-w-sm text-white/65">Acabamento, proporção e execução em obras reais.</p>
+    </div>
+
+    <div class="grid auto-rows-[260px] gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      {visualGallery.map((image) => (
+        <figure class={`group relative overflow-hidden rounded-[2rem] bg-white/5 ${image.className}`}>
+          <img
+            src={image.src}
+            alt={image.alt}
+            class="h-full w-full object-cover transition duration-700 group-hover:scale-[1.03]"
+            loading="lazy"
+          />
+        </figure>
+      ))}
+    </div>
+  </div>
+</section>

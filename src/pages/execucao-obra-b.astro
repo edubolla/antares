@@ -1,0 +1,42 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import FloatingWhatsApp from "../components/FloatingWhatsApp.astro";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import MobileStickyCta from "../components/MobileStickyCta.astro";
+import FeaturedWorks from "../components/execucao-obra-b/FeaturedWorks.astro";
+import VisualExecutionDifferentials from "../components/execucao-obra-b/VisualExecutionDifferentials.astro";
+import VisualExecutionFinalCta from "../components/execucao-obra-b/VisualExecutionFinalCta.astro";
+import VisualExecutionHero from "../components/execucao-obra-b/VisualExecutionHero.astro";
+import VisualExecutionProcess from "../components/execucao-obra-b/VisualExecutionProcess.astro";
+import VisualExecutionProof from "../components/execucao-obra-b/VisualExecutionProof.astro";
+import WorksMasonry from "../components/execucao-obra-b/WorksMasonry.astro";
+import { visualExecutionMessages, visualNavigation } from "../data/execucaoObraB";
+---
+
+<BaseLayout
+  title="Antares Construtora | Execução de Obra Residencial"
+  description="Uma experiência visual da Antares Construtora para quem já tem projeto e procura execução residencial com acabamento, controle e acompanhamento técnico."
+>
+  <Header
+    navItems={visualNavigation}
+    ctaLabel="Enviar projeto"
+    ctaMessage={visualExecutionMessages.projectAnalysis}
+  />
+  <main>
+    <VisualExecutionHero />
+    <FeaturedWorks />
+    <VisualExecutionProcess />
+    <WorksMasonry />
+    <VisualExecutionDifferentials />
+    <VisualExecutionProof />
+    <VisualExecutionFinalCta />
+  </main>
+  <Footer
+    description="Execução de obras residenciais, engenharia e construção completa em Canoas e região."
+    ctaLabel="Enviar projeto"
+    ctaMessage={visualExecutionMessages.projectAnalysis}
+  />
+  <FloatingWhatsApp message={visualExecutionMessages.projectAnalysis} hideOnMobile showLabel />
+  <MobileStickyCta label="Enviar projeto para análise" message={visualExecutionMessages.projectAnalysis} />
+</BaseLayout>

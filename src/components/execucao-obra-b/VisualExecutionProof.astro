@@ -1,0 +1,26 @@
+---
+import { visualProof } from "../../data/execucaoObraB";
+---
+
+<section class="bg-white py-8">
+  <div class="container-page">
+    <div class="grid overflow-hidden rounded-[2.5rem] bg-antares-navy text-white shadow-premium lg:grid-cols-[1.1fr_0.9fr]">
+      <img
+        src={visualProof.image}
+        alt={visualProof.imageAlt}
+        class="h-[520px] w-full object-cover"
+        loading="lazy"
+      />
+      <div class="flex items-end p-8 sm:p-10 lg:p-14">
+        <blockquote>
+          <p class="text-3xl font-semibold leading-tight tracking-[-0.05em] sm:text-5xl">
+            “{visualProof.quote}”
+          </p>
+          <footer class="mt-8 text-sm font-semibold uppercase tracking-[0.2em] text-white/55">
+            {visualProof.name}
+          </footer>
+        </blockquote>
+      </div>
+    </div>
+  </div>
+</section>

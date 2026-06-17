@@ -1,0 +1,31 @@
+---
+import CtaLink from "../CtaLink.astro";
+import { visualExecutionMessages, visualFinalCta } from "../../data/execucaoObraB";
+---
+
+<section id="contato" class="relative min-h-[82vh] overflow-hidden bg-antares-navy text-white">
+  <img
+    src={visualFinalCta.image}
+    alt={visualFinalCta.imageAlt}
+    class="absolute inset-0 h-full w-full object-cover"
+    loading="lazy"
+  />
+  <div class="absolute inset-0 bg-gradient-to-t from-antares-navy via-antares-navy/45 to-black/10"></div>
+
+  <div class="container-page relative z-10 flex min-h-[82vh] items-end py-16">
+    <div class="max-w-3xl">
+      <p class="eyebrow mb-4">Próximo passo</p>
+      <h2 class="text-5xl font-semibold tracking-[-0.06em] sm:text-7xl">
+        {visualFinalCta.headline}
+      </h2>
+      <p class="mt-5 text-lg text-white/80">{visualFinalCta.subheadline}</p>
+      <CtaLink
+        label="Enviar projeto pelo WhatsApp"
+        message={visualExecutionMessages.projectAnalysis}
+        variant="whatsapp"
+        icon="whatsapp"
+        class="mt-8 px-7 py-4 text-base"
+      />
+    </div>
+  </div>
+</section>
