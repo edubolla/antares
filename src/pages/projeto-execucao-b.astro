@@ -1,0 +1,53 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import FloatingWhatsApp from "../components/FloatingWhatsApp.astro";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import FeaturedPortfolio from "../components/projeto-execucao-b/FeaturedPortfolio.astro";
+import VisualDifferentials from "../components/projeto-execucao-b/VisualDifferentials.astro";
+import VisualFaq from "../components/projeto-execucao-b/VisualFaq.astro";
+import VisualFinalCta from "../components/projeto-execucao-b/VisualFinalCta.astro";
+import VisualHero from "../components/projeto-execucao-b/VisualHero.astro";
+import VisualProcess from "../components/projeto-execucao-b/VisualProcess.astro";
+import VisualTestimonials from "../components/projeto-execucao-b/VisualTestimonials.astro";
+import VisualValueStrip from "../components/projeto-execucao-b/VisualValueStrip.astro";
+import WorksGallery from "../components/projeto-execucao-b/WorksGallery.astro";
+
+const navItems = [
+  { label: "Portfólio", href: "#portfolio" },
+  { label: "Processo", href: "#como-funciona" },
+  { label: "Obras", href: "#obras" },
+  { label: "Depoimentos", href: "#depoimentos" },
+];
+---
+
+<BaseLayout
+  title="Antares Construtora | Projeto + Execução Visual"
+  description="Uma experiência visual da Antares Construtora para quem busca projeto, documentação e construção residencial com uma única equipe."
+>
+  <Header
+    navItems={navItems}
+    ctaLabel="Falar com especialista"
+    ctaMessage="Olá, vi a versão visual do site e quero falar com um especialista sobre projeto e execução."
+  />
+  <main>
+    <VisualHero />
+    <VisualValueStrip />
+    <FeaturedPortfolio />
+    <VisualProcess />
+    <WorksGallery />
+    <VisualDifferentials />
+    <VisualTestimonials />
+    <VisualFaq />
+    <VisualFinalCta />
+  </main>
+  <Footer
+    description="Projeto, documentação e construção residencial em Canoas e região."
+    ctaLabel="Falar com especialista"
+    ctaMessage="Olá, quero conversar com um especialista da Antares sobre projeto e execução."
+  />
+  <FloatingWhatsApp
+    showLabel
+    message="Olá, vi a página visual da Antares e quero conversar sobre projeto e execução."
+  />
+</BaseLayout>

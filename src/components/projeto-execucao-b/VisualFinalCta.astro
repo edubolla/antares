@@ -1,0 +1,24 @@
+---
+import CtaLink from "../CtaLink.astro";
+import { images } from "../../data/landing";
+---
+
+<section class="relative min-h-[78vh] overflow-hidden bg-antares-navy text-white">
+  <img src={images.heroAlt} alt="Casa moderna com piscina entregue pela Antares" class="absolute inset-0 h-full w-full object-cover" loading="lazy" />
+  <div class="absolute inset-0 bg-gradient-to-t from-antares-navy via-antares-navy/45 to-black/10"></div>
+
+  <div class="container-page relative z-10 flex min-h-[78vh] items-end py-16">
+    <div class="max-w-3xl">
+      <p class="eyebrow mb-4">Próximo passo</p>
+      <h2 class="text-5xl font-semibold tracking-[-0.06em] sm:text-7xl">Vamos planejar sua casa?</h2>
+      <p class="mt-5 text-lg text-white/80">Converse com a Antares pelo WhatsApp.</p>
+      <CtaLink
+        label="Falar com um especialista"
+        message="Olá, gostaria de planejar minha casa com a Antares."
+        variant="whatsapp"
+        icon="whatsapp"
+        class="mt-8 px-7 py-4 text-base"
+      />
+    </div>
+  </div>
+</section>

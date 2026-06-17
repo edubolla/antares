@@ -97,6 +97,54 @@ export const portfolioImages = [
   },
 ];
 
+export const visualPortfolioImages = [
+  {
+    src: "/image/hero/obra%20completa%2000001.webp",
+    alt: "Fachada residencial moderna com garagem e paisagismo",
+    label: "Casa pronta",
+  },
+  {
+    src: "/image/portfolio/obra%20completa%2000002.webp",
+    alt: "Ambiente social integrado com iluminação premium",
+    label: "Interiores",
+  },
+  {
+    src: "/image/portfolio/obra%20completa%2000004.webp",
+    alt: "Cozinha moderna finalizada com ilha",
+    label: "Acabamento",
+  },
+  {
+    src: "/image/portfolio/obra%20completa%2000005.webp",
+    alt: "Área externa coberta com forro de madeira",
+    label: "Área externa",
+  },
+  {
+    src: "/image/hero/obra%20completa%2000006.webp",
+    alt: "Casa moderna com piscina",
+    label: "Entrega",
+  },
+  {
+    src: "/image/portfolio/20250807_213918460_iOS.webp",
+    alt: "Banheiro com revestimento em pedra",
+    label: "Detalhes",
+  },
+  {
+    src: "/image/portfolio/20251101_152003207_iOS.webp",
+    alt: "Ambiente interno com parede de pedra",
+    label: "Materiais",
+  },
+  {
+    src: "/image/portfolio/construtoraelizium_1723776552086.webp",
+    alt: "Cozinha planejada em residência finalizada",
+    label: "Execução",
+  },
+  {
+    src: "/image/portfolio/casas%20prontas%2000002.webp",
+    alt: "Fachada residencial finalizada",
+    label: "Residencial",
+  },
+];
+
 export const testimonials = [
   {
     name: "Fernanda Vargas",

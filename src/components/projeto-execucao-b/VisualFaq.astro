@@ -1,0 +1,47 @@
+---
+import CtaLink from "../CtaLink.astro";
+
+const faqs = [
+  {
+    question: "Preciso ter projeto pronto?",
+    answer: "Não. A Antares pode começar pelo projeto e seguir até a execução.",
+  },
+  {
+    question: "Vocês cuidam da documentação?",
+    answer: "Sim. Projeto, engenharia e aprovação documental fazem parte do processo.",
+  },
+  {
+    question: "Quanto custa construir?",
+    answer: "Depende do terreno, metragem e padrão. A conversa inicial organiza esse caminho.",
+  },
+  {
+    question: "Vocês fazem reformas?",
+    answer: "Não. A Antares atua com construção residencial do zero.",
+  },
+];
+---
+
+<section id="faq" class="bg-white py-20 sm:py-24">
+  <div class="container-page">
+    <div class="mx-auto max-w-3xl text-center">
+      <p class="eyebrow mb-4">Antes de começar</p>
+      <h2 class="text-4xl font-semibold tracking-[-0.05em] text-antares-navy sm:text-6xl">Dúvidas rápidas.</h2>
+    </div>
+
+    <div class="mx-auto mt-12 grid max-w-4xl gap-3">
+      {faqs.map((faq) => (
+        <details class="group rounded-[2rem] border border-antares-line bg-white p-6">
+          <summary class="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-antares-navy">
+            {faq.question}
+            <span class="text-2xl text-antares-blue transition group-open:rotate-45">+</span>
+          </summary>
+          <p class="mt-4 leading-7 text-antares-muted">{faq.answer}</p>
+        </details>
+      ))}
+    </div>
+
+    <div class="mt-10 text-center">
+      <CtaLink label="Tirar uma dúvida" message="Olá, tenho uma dúvida sobre projeto e execução da minha casa." />
+    </div>
+  </div>
+</section>

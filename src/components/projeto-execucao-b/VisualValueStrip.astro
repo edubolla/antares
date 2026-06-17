@@ -1,0 +1,18 @@
+---
+const items = ["Projeto", "Documentação", "Obra"];
+---
+
+<section class="bg-white py-10 sm:py-14">
+  <div class="container-page">
+    <div class="grid gap-4 sm:grid-cols-3">
+      {items.map((item) => (
+        <div class="rounded-[2rem] border border-antares-line bg-white p-6 text-center">
+          <p class="text-3xl font-semibold tracking-[-0.05em] text-antares-navy">{item}</p>
+        </div>
+      ))}
+    </div>
+    <p class="mx-auto mt-6 max-w-2xl text-center text-antares-muted">
+      Um processo conectado desde o primeiro traço.
+    </p>
+  </div>
+</section>

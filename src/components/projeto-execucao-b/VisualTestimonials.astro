@@ -1,0 +1,37 @@
+---
+import CtaLink from "../CtaLink.astro";
+import { images, testimonials } from "../../data/landing";
+---
+
+<section id="depoimentos" class="section-padding bg-antares-soft">
+  <div class="container-page">
+    <div class="relative overflow-hidden rounded-[2.5rem] bg-antares-navy px-5 py-16 text-white sm:px-8 lg:px-12 lg:py-20">
+      <img src={images.testimonial} alt="Casa entregue pela Antares" class="absolute inset-0 h-full w-full object-cover opacity-20 mix-blend-luminosity" loading="lazy" />
+      <div class="absolute inset-0 bg-gradient-to-br from-antares-navy via-antares-navy/95 to-antares-blue/80"></div>
+
+      <div class="relative z-10">
+        <div class="mx-auto max-w-3xl text-center">
+          <p class="eyebrow mb-4">Depoimentos</p>
+          <h2 class="text-4xl font-semibold tracking-[-0.05em] sm:text-6xl">Confiança de quem já construiu.</h2>
+        </div>
+
+        <div class="mt-12 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+          {testimonials.map((testimonial) => (
+            <blockquote class="rounded-[2rem] border border-white/15 bg-white/10 p-6 backdrop-blur">
+              <p class="leading-7 text-white/90">"{testimonial.quote}"</p>
+              <footer class="mt-6 font-semibold text-white">{testimonial.name}</footer>
+            </blockquote>
+          ))}
+        </div>
+
+        <div class="mt-10 text-center">
+          <CtaLink
+            label="Falar com um especialista"
+            message="Olá, vi os depoimentos e quero conversar com um especialista da Antares."
+            variant="light"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
