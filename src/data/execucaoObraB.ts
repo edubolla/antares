@@ -101,7 +101,7 @@ export const visualGallery = [
   {
     src: "/image/portfolio/construtoraelizium_1723776220278.webp",
     alt: "Cozinha e área gourmet finalizadas",
-    className: "",
+    className: "lg:col-span-2",
   },
 ];
 
