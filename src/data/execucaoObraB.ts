@@ -98,6 +98,11 @@ export const visualGallery = [
     alt: "Ambiente interno finalizado com iluminação",
     className: "lg:col-span-2",
   },
+  {
+    src: "/image/portfolio/construtoraelizium_1723776220278.webp",
+    alt: "Cozinha e área gourmet finalizadas",
+    className: "",
+  },
 ];
 
 export const visualDifferentials = [
