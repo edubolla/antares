@@ -11,10 +11,11 @@ import { construtoraTestimonials } from "../../data/construtora";
       </h2>
     </div>
 
-    <div class="mt-10 grid gap-4 md:grid-cols-3">
+    <div class="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
       {construtoraTestimonials.map((testimonial) => (
-        <blockquote class="rounded-[2rem] border border-antares-line bg-white p-6">
-          <p class="leading-7 text-antares-muted">"{testimonial.quote}"</p>
+        <blockquote class="flex flex-col rounded-[2rem] border border-antares-line bg-white p-6">
+          <span class="eyebrow mb-3 text-xs">{testimonial.tag}</span>
+          <p class="flex-1 leading-7 text-antares-muted">"{testimonial.quote}"</p>
           <footer class="mt-5 font-semibold text-antares-navy">{testimonial.name}</footer>
         </blockquote>
       ))}

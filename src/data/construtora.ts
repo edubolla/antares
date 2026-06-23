@@ -1,14 +1,7 @@
 import { assetPath } from "./assets";
-import { testimonials, whatsappUrl } from "./landing";
+import { testimonials, visualPortfolioImages, whatsappUrl } from "./landing";
 
 export { whatsappUrl };
-
-export const construtoraNavigation = [
-  { label: "Serviços", href: "#servicos" },
-  { label: "Obras", href: "#obras" },
-  { label: "Depoimentos", href: "#depoimentos" },
-  { label: "Dúvidas", href: "#faq" },
-];
 
 export const construtoraMessages = {
   default: "Olá, estou procurando uma construtora e gostaria de conversar com a Antares.",
@@ -21,24 +14,27 @@ export const construtoraImages = {
   finalCta: assetPath("/image/cta-final/IMG_6765.webp"),
 };
 
-export const construtoraServices = [
-  {
-    title: "Projeto",
-    description: "Arquitetura e engenharia alinhadas ao que você quer construir.",
-  },
-  {
-    title: "Documentação",
-    description: "Aprovações e orientação técnica antes da obra começar.",
-  },
-  {
-    title: "Execução",
-    description: "Construção residencial com acompanhamento profissional.",
-  },
-];
+export const construtoraProof = {
+  years: "+8 anos de mercado",
+  regionsLabel: "Canoas e região",
+  regions: [
+    "Canoas",
+    "Esteio",
+    "São Leopoldo",
+    "Gravataí",
+    "Cachoeirinha",
+    "Sapucaia do Sul",
+    "Novo Hamburgo",
+    "Campo Bom",
+    "Ivoti",
+    "Dois Irmãos",
+  ],
+  method: "Projeto, documentação e execução por uma única equipe",
+};
 
 export const construtoraMoments = [
   {
-    title: "Tenho terreno e quero construir",
+    title: "Já tenho terreno e quero construir",
     description: "Ainda estou organizando o caminho do projeto à obra.",
     message: construtoraMessages.terreno,
     cta: "Falar sobre meu terreno",
@@ -51,42 +47,68 @@ export const construtoraMoments = [
   },
 ];
 
-export const construtoraDifferentials = [
-  "Planejamento antes da obra",
-  "Cronograma e etapas claras",
-  "Gestão completa",
-  "Acompanhamento profissional",
+export const construtoraProblem = {
+  eyebrow: "O que pesa nessa decisão",
+  title: "O medo não é construir. É escolher errado.",
+  paragraphs: [
+    "Contratar uma construtora mexe com seu dinheiro, seu tempo e a casa onde sua família vai morar.",
+    "E o receio é sempre parecido: ficar dividido entre arquiteto, engenheiro e construtora — cada um cuidando de uma parte, ninguém respondendo pelo todo. Documentação parada na prefeitura. Ligação que não é respondida. Promessa que muda depois que o contrato é assinado.",
+  ],
+};
+
+export const construtoraSolution = {
+  eyebrow: "Como a Antares resolve",
+  title: "Uma equipe só, do projeto à entrega da chave.",
+  paragraph:
+    "Você não contrata fornecedores separados. A Antares conduz o projeto arquitetônico, a documentação junto aos órgãos competentes e a execução da obra — com a mesma equipe respondendo por tudo, do primeiro desenho até a entrega da chave.",
+};
+
+export const construtoraBenefits = [
+  {
+    title: "Uma equipe, do desenho à chave",
+    description: "Sem ficar dividido entre arquiteto, engenheiro e construtora.",
+  },
+  {
+    title: "Documentação conduzida por nós",
+    description: "Aprovações junto aos órgãos competentes, para sua obra não travar no caminho.",
+  },
+  {
+    title: "Acompanhamento durante toda a obra",
+    description: "Não só até a assinatura do contrato.",
+  },
+  {
+    title: "+8 anos atendendo Canoas e região",
+    description: "Não é a primeira casa que construímos na sua cidade.",
+  },
 ];
 
-export const construtoraPortfolio = [
-  {
-    src: assetPath("/image/portfolio/casas%20prontas%2000008.webp"),
-    alt: "Casa residencial finalizada com fachada contemporânea",
-  },
-  {
-    src: assetPath("/image/portfolio/obra%20completa%2000002.webp"),
-    alt: "Ambiente interno finalizado com acabamento premium",
-  },
-  {
-    src: assetPath("/image/portfolio/obra%20completa%2000004.webp"),
-    alt: "Cozinha moderna finalizada",
-  },
-  {
-    src: assetPath("/image/portfolio/casas%20prontas%2000002.webp"),
-    alt: "Fachada residencial concluída",
-  },
-];
+export const construtoraPortfolio = visualPortfolioImages;
 
-export const construtoraTestimonials = testimonials.slice(0, 3);
+export const construtoraTestimonials = [
+  { ...testimonials[0], tag: "Atendimento atencioso" },
+  { ...testimonials[1], tag: "Projeto complexo, resolvido" },
+  { ...testimonials[2], tag: "No prazo combinado" },
+  { ...testimonials[3], tag: "Do orçamento ao projeto" },
+];
 
 export const construtoraFaqs = [
   {
     question: "Vocês constroem casas do zero?",
-    answer: "Sim. A Antares atua com construção residencial, projeto, documentação, engenharia e execução completa.",
+    answer: "Sim. A Antares atua com construção residencial completa: projeto, documentação, engenharia e execução.",
+  },
+  {
+    question: "Vocês atendem minha cidade?",
+    answer:
+      "Atendemos Canoas e cidades próximas: Esteio, São Leopoldo, Gravataí, Cachoeirinha, Sapucaia do Sul, Novo Hamburgo, Campo Bom, Ivoti e Dois Irmãos. Fora dessa região, fale com a equipe pelo WhatsApp para confirmar.",
   },
   {
     question: "Preciso já ter projeto pronto?",
     answer: "Não. Podemos começar pelo projeto e seguir até a execução da obra.",
+  },
+  {
+    question: "Quem cuida da documentação e das aprovações?",
+    answer:
+      "A própria Antares conduz a documentação e as aprovações junto aos órgãos competentes — você não precisa correr atrás disso separadamente.",
   },
   {
     question: "Vocês fazem reformas?",
@@ -94,6 +116,6 @@ export const construtoraFaqs = [
   },
   {
     question: "Como começo a conversa?",
-    answer: "Pelo WhatsApp. A equipe entende seu momento, responde dúvidas iniciais e orienta os próximos passos.",
+    answer: "Pelo WhatsApp. A equipe entende seu momento, responde dúvidas iniciais e orienta os próximos passos, sem compromisso.",
   },
 ];
