@@ -8,6 +8,7 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
+    "build:lp": "ASTRO_BASE=/lp astro build",
     "preview": "astro preview",
     "astro": "astro"
   },

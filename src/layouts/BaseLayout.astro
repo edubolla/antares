@@ -8,6 +8,9 @@ interface Props {
 }
 
 const { title, description } = Astro.props;
+
+const gtmId = "GTM-TX5W6LW9";
+const gaId = "G-7HS68F46YS";
 ---
 
 <!doctype html>
@@ -22,8 +25,126 @@ const { title, description } = Astro.props;
     <meta property="og:type" content="website" />
     <link rel="icon" type="image/png" href={images.favicon} />
     <title>{title}</title>
+    <script is:inline define:vars={{ gtmId }}>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0];
+        var j = d.createElement(s);
+        var dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", gtmId);
+    </script>
+    <script async src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}></script>
+    <script is:inline define:vars={{ gaId }}>
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = function gtag() {
+        dataLayer.push(arguments);
+      };
+      window.gtag("js", new Date());
+      window.gtag("config", gaId);
+    </script>
   </head>
   <body>
+    <noscript>
+      <iframe
+        src={`https://www.googletagmanager.com/ns.html?id=${gtmId}`}
+        height="0"
+        width="0"
+        style="display:none;visibility:hidden"
+      ></iframe>
+    </noscript>
     <slot />
+    <script is:inline>
+      (function () {
+        var sentScroll50 = false;
+        var sentScroll100 = false;
+
+        function trackEvent(eventName, params) {
+          var eventParams = Object.assign(
+            {
+              page_location: window.location.href,
+              page_path: window.location.pathname,
+            },
+            params || {},
+          );
+
+          window.dataLayer = window.dataLayer || [];
+          window.dataLayer.push(Object.assign({ event: eventName }, eventParams));
+
+          if (typeof window.gtag === "function") {
+            window.gtag("event", eventName, eventParams);
+          }
+        }
+
+        function getScrollPercent() {
+          var documentElement = document.documentElement;
+          var body = document.body;
+          var scrollTop = window.scrollY || documentElement.scrollTop || body.scrollTop || 0;
+          var scrollHeight = Math.max(
+            body.scrollHeight,
+            body.offsetHeight,
+            documentElement.clientHeight,
+            documentElement.scrollHeight,
+            documentElement.offsetHeight,
+          );
+          var viewportHeight = window.innerHeight || documentElement.clientHeight;
+          var scrollableHeight = scrollHeight - viewportHeight;
+
+          if (scrollableHeight <= 0) {
+            return 100;
+          }
+
+          return (scrollTop / scrollableHeight) * 100;
+        }
+
+        function handleScroll() {
+          var scrollPercent = getScrollPercent();
+
+          if (!sentScroll50 && scrollPercent >= 50) {
+            sentScroll50 = true;
+            trackEvent("scroll50", { scroll_percent: 50 });
+          }
+
+          if (!sentScroll100 && scrollPercent >= 99) {
+            sentScroll100 = true;
+            trackEvent("scroll100", { scroll_percent: 100 });
+          }
+
+          if (sentScroll50 && sentScroll100) {
+            window.removeEventListener("scroll", handleScroll);
+          }
+        }
+
+        document.addEventListener("click", function (event) {
+          var link = event.target.closest("a[href]");
+
+          if (!link) {
+            return;
+          }
+
+          var href = link.href || "";
+
+          if (href.includes("wa.me") || href.includes("whatsapp.com")) {
+            trackEvent("btn_whatsapp", { link_url: href, link_text: link.textContent.trim() });
+            return;
+          }
+
+          if (href.includes("instagram.com/antaresconstrutoracanoas")) {
+            trackEvent("btn_instagram", { link_url: href, link_text: link.textContent.trim() });
+            return;
+          }
+
+          if (href.includes("facebook.com/antaresconstrutoracanoas")) {
+            trackEvent("btn_facebook", { link_url: href, link_text: link.textContent.trim() });
+          }
+        });
+
+        window.addEventListener("scroll", handleScroll, { passive: true });
+        handleScroll();
+      })();
+    </script>
   </body>
 </html>

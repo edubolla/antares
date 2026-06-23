@@ -1,0 +1,23 @@
+---
+import { construtoraDifferentials } from "../../data/construtora";
+---
+
+<section class="bg-white py-16 sm:py-20">
+  <div class="container-page">
+    <div class="mx-auto max-w-2xl text-center">
+      <p class="eyebrow mb-4">Entrega</p>
+      <h2 class="text-3xl font-semibold tracking-[-0.05em] text-antares-navy sm:text-4xl">
+        Por que escolher a Antares.
+      </h2>
+    </div>
+
+    <div class="mx-auto mt-10 grid max-w-3xl gap-3 sm:grid-cols-2">
+      {construtoraDifferentials.map((item) => (
+        <div class="flex items-center gap-3 rounded-2xl border border-antares-line bg-antares-soft px-5 py-4">
+          <span class="h-2 w-2 shrink-0 rounded-full bg-antares-blue"></span>
+          <p class="font-semibold text-antares-navy">{item}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,39 @@
+---
+import CtaLink from "../CtaLink.astro";
+import { construtoraImages, construtoraMessages } from "../../data/construtora";
+---
+
+<section class="relative overflow-hidden bg-antares-soft">
+  <div class="container-page grid min-h-[calc(100vh-5rem)] items-center gap-10 py-14 lg:grid-cols-[1fr_1fr] lg:gap-12 lg:py-20">
+    <div class="relative z-10">
+      <p class="eyebrow mb-4">Construtora Antares</p>
+      <h1 class="max-w-2xl text-4xl font-semibold tracking-[-0.06em] text-antares-navy sm:text-5xl lg:text-6xl">
+        Construtora para construção residencial.
+      </h1>
+      <p class="mt-5 max-w-xl text-lg leading-8 text-antares-muted">
+        Projeto, documentação e execução com acompanhamento profissional em cada etapa da obra.
+      </p>
+      <div class="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
+        <CtaLink
+          label="Falar com a Antares"
+          message={construtoraMessages.default}
+          variant="whatsapp"
+          icon="whatsapp"
+          class="w-full px-7 py-4 text-base sm:w-auto"
+        />
+        <a href="#servicos" class="inline-flex items-center justify-center rounded-full px-6 py-4 text-sm font-semibold text-antares-navy transition hover:text-antares-blue">
+          Ver o que fazemos
+        </a>
+      </div>
+    </div>
+
+    <div class="relative">
+      <img
+        src={construtoraImages.hero}
+        alt="Casa residencial finalizada pela Antares Construtora"
+        class="aspect-[4/3] w-full rounded-[2rem] object-cover shadow-premium lg:aspect-[5/4]"
+        loading="eager"
+      />
+    </div>
+  </div>
+</section>

@@ -1,3 +1,4 @@
+import { assetPath } from "./assets";
 export const whatsappNumber = "5551999747745";
 export const whatsappLabel = "(51) 99974-7745";
 
@@ -13,19 +14,19 @@ export const navigation = [
 ];
 
 export const images = {
-  logoBlue: "/image/logotipo/logo%20antares%20azul.png",
-  logoWhite: "/image/logotipo/logo%20antares%20branco.png",
-  favicon: "/image/logotipo/favicon.png",
-  hero: "/image/hero/obra%20completa%2000001.webp",
-  heroAlt: "/image/hero/obra%20completa%2000006.webp",
-  pain: "/image/processo/IMG_0903.webp",
-  solution: "/image/processo/projeto%2000002.webp",
-  process: "/image/processo/projeto%2000001.webp",
-  processInterior: "/image/processo/IMG_9965.webp",
-  processFoundation: "/image/processo/IMG_0902.webp",
-  detail: "/image/portfolio/20251101_152003207_iOS.webp",
-  testimonial: "/image/prova-social/PHOTO-2025-03-25-14-41-09.webp",
-  finalCta: "/image/cta-final/IMG_6765.webp",
+  logoBlue: assetPath("/image/logotipo/Logotipo%20Antares%20Construtora%20H%20Azul%20e%20Preto.png"),
+  logoWhite: assetPath("/image/logotipo/Logotipo%20Antares%20Construtora%20H%20Azul%20e%20Preto.png"),
+  favicon: assetPath("/image/logotipo/Favicon%20Construtora%20Antares.png"),
+  hero: assetPath("/image/hero/obra%20completa%2000001.webp"),
+  heroAlt: assetPath("/image/hero/obra%20completa%2000006.webp"),
+  pain: assetPath("/image/processo/IMG_0903.webp"),
+  solution: assetPath("/image/processo/projeto%2000002.webp"),
+  process: assetPath("/image/processo/projeto%2000001.webp"),
+  processInterior: assetPath("/image/processo/IMG_9965.webp"),
+  processFoundation: assetPath("/image/processo/IMG_0902.webp"),
+  detail: assetPath("/image/portfolio/20251101_152003207_iOS.webp"),
+  testimonial: assetPath("/image/prova-social/PHOTO-2025-03-25-14-41-09.webp"),
+  finalCta: assetPath("/image/cta-final/IMG_6765.webp"),
 };
 
 export const processSteps = [
@@ -76,85 +77,85 @@ export const differentials = [
 
 export const portfolioImages = [
   {
-    src: "/image/portfolio/obra%20completa%2000002.webp",
+    src: assetPath("/image/portfolio/obra%20completa%2000002.webp"),
     alt: "Ambiente interno finalizado com iluminação e acabamento premium",
   },
   {
-    src: "/image/portfolio/obra%20completa%2000004.webp",
+    src: assetPath("/image/portfolio/obra%20completa%2000004.webp"),
     alt: "Cozinha moderna finalizada com ilha e marcenaria",
   },
   {
-    src: "/image/portfolio/obra%20completa%2000005.webp",
+    src: assetPath("/image/portfolio/obra%20completa%2000005.webp"),
     alt: "Área externa coberta com forro de madeira",
   },
   {
-    src: "/image/portfolio/20250807_213918460_iOS.webp",
+    src: assetPath("/image/portfolio/20250807_213918460_iOS.webp"),
     alt: "Banheiro finalizado com revestimento em pedra",
   },
   {
-    src: "/image/portfolio/casas%20prontas%2000002.webp",
+    src: assetPath("/image/portfolio/casas%20prontas%2000002.webp"),
     alt: "Fachada residencial moderna concluída",
   },
 ];
 
 export const visualPortfolioImages = [
   {
-    src: "/image/portfolio/casas%20prontas%2000008.webp",
+    src: assetPath("/image/portfolio/casas%20prontas%2000008.webp"),
     alt: "Casa pronta com pátio em pedra e fachada contemporânea",
     label: "Casa pronta",
   },
   {
-    src: "/image/portfolio/casas%20prontas%2000002.webp",
+    src: assetPath("/image/portfolio/casas%20prontas%2000002.webp"),
     alt: "Casa residencial moderna finalizada",
     label: "Casa pronta",
   },
   {
-    src: "/image/portfolio/obra%20completa%2000007.webp",
+    src: assetPath("/image/portfolio/obra%20completa%2000007.webp"),
     alt: "Interior premium finalizado com iluminação linear",
     label: "Interiores",
   },
   {
-    src: "/image/portfolio/casas%20prontas%2000004.webp",
+    src: assetPath("/image/portfolio/casas%20prontas%2000004.webp"),
     alt: "Casa pronta com fachada contemporânea",
     label: "Entrega",
   },
   {
-    src: "/image/portfolio/casas%20prontas%2000005.webp",
+    src: assetPath("/image/portfolio/casas%20prontas%2000005.webp"),
     alt: "Residência concluída com acabamento externo",
     label: "Projeto",
   },
   {
-    src: "/image/portfolio/casas%20prontas%2000006.webp",
+    src: assetPath("/image/portfolio/casas%20prontas%2000006.webp"),
     alt: "Casa térrea finalizada",
     label: "Obra pronta",
   },
   {
-    src: "/image/portfolio/casas%20prontas%2000003.webp",
+    src: assetPath("/image/portfolio/casas%20prontas%2000003.webp"),
     alt: "Fachada residencial finalizada pela Antares",
     label: "Residencial",
   },
   {
-    src: "/image/portfolio/casas%20prontas%2000009.webp",
+    src: assetPath("/image/portfolio/casas%20prontas%2000009.webp"),
     alt: "Casa pronta com volumetria moderna",
     label: "Arquitetura",
   },
   {
-    src: "/image/portfolio/obra%20completa%2000002.webp",
+    src: assetPath("/image/portfolio/obra%20completa%2000002.webp"),
     alt: "Ambiente social integrado com iluminação premium",
     label: "Interiores",
   },
   {
-    src: "/image/portfolio/obra%20completa%2000004.webp",
+    src: assetPath("/image/portfolio/obra%20completa%2000004.webp"),
     alt: "Cozinha moderna finalizada com ilha",
     label: "Acabamento",
   },
   {
-    src: "/image/portfolio/obra%20completa%2000005.webp",
+    src: assetPath("/image/portfolio/obra%20completa%2000005.webp"),
     alt: "Área externa coberta com forro de madeira",
     label: "Área externa",
   },
   {
-    src: "/image/portfolio/20250807_213918460_iOS.webp",
+    src: assetPath("/image/portfolio/20250807_213918460_iOS.webp"),
     alt: "Banheiro com revestimento em pedra",
     label: "Detalhes",
   },

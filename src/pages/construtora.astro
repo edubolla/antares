@@ -1,0 +1,44 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ConstrutoraDifferentials from "../components/construtora/ConstrutoraDifferentials.astro";
+import ConstrutoraFaq from "../components/construtora/ConstrutoraFaq.astro";
+import ConstrutoraFinalCta from "../components/construtora/ConstrutoraFinalCta.astro";
+import ConstrutoraHero from "../components/construtora/ConstrutoraHero.astro";
+import ConstrutoraMoment from "../components/construtora/ConstrutoraMoment.astro";
+import ConstrutoraPortfolio from "../components/construtora/ConstrutoraPortfolio.astro";
+import ConstrutoraServices from "../components/construtora/ConstrutoraServices.astro";
+import ConstrutoraTestimonials from "../components/construtora/ConstrutoraTestimonials.astro";
+import FloatingWhatsApp from "../components/FloatingWhatsApp.astro";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import MobileStickyCta from "../components/MobileStickyCta.astro";
+import { construtoraMessages, construtoraNavigation } from "../data/construtora";
+---
+
+<BaseLayout
+  title="Antares Construtora | Construção Residencial"
+  description="Construtora para construção residencial do zero. Projeto, documentação e execução com acompanhamento profissional."
+>
+  <Header
+    navItems={construtoraNavigation}
+    ctaLabel="Falar com a Antares"
+    ctaMessage={construtoraMessages.default}
+  />
+  <main>
+    <ConstrutoraHero />
+    <ConstrutoraServices />
+    <ConstrutoraMoment />
+    <ConstrutoraPortfolio />
+    <ConstrutoraDifferentials />
+    <ConstrutoraTestimonials />
+    <ConstrutoraFaq />
+    <ConstrutoraFinalCta />
+  </main>
+  <Footer
+    description="Construtora para construção residencial, projeto, documentação e execução completa."
+    ctaLabel="Falar com a Antares"
+    ctaMessage={construtoraMessages.default}
+  />
+  <FloatingWhatsApp message={construtoraMessages.default} showLabel />
+  <MobileStickyCta label="Falar com a Antares" message={construtoraMessages.default} />
+</BaseLayout>

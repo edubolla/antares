@@ -1,3 +1,4 @@
+import { assetPath } from "./assets";
 export const executionNavigation = [
   { label: "Execução", href: "#execucao" },
   { label: "Processo", href: "#processo" },
@@ -15,17 +16,17 @@ export const executionMessages = {
 };
 
 export const executionImages = {
-  hero: "/image/hero/obra%20completa%2000001.webp",
-  heroAlt: "/image/hero/20251101_151707865_iOS.webp",
-  processFoundation: "/image/processo/IMG_0902.webp",
-  processStructure: "/image/processo/IMG_0903.webp",
-  processMasonry: "/image/processo/IMG_2427.webp",
-  processInterior: "/image/processo/IMG_9965.webp",
-  differentialDetail: "/image/portfolio/obra%20completa%2000003.webp",
-  differentialKitchen: "/image/portfolio/obra%20completa%2000004.webp",
-  differentialFinish: "/image/portfolio/20251101_152003207_iOS.webp",
-  differentialFacadeDetail: "/image/portfolio/casas%20prontas%2000006.webp",
-  finalCta: "/image/cta-final/IMG_6765.webp",
+  hero: assetPath("/image/hero/obra%20completa%2000001.webp"),
+  heroAlt: assetPath("/image/hero/20251101_151707865_iOS.webp"),
+  processFoundation: assetPath("/image/processo/IMG_0902.webp"),
+  processStructure: assetPath("/image/processo/IMG_0903.webp"),
+  processMasonry: assetPath("/image/processo/IMG_2427.webp"),
+  processInterior: assetPath("/image/processo/IMG_9965.webp"),
+  differentialDetail: assetPath("/image/portfolio/obra%20completa%2000003.webp"),
+  differentialKitchen: assetPath("/image/portfolio/obra%20completa%2000004.webp"),
+  differentialFinish: assetPath("/image/portfolio/20251101_152003207_iOS.webp"),
+  differentialFacadeDetail: assetPath("/image/portfolio/casas%20prontas%2000006.webp"),
+  finalCta: assetPath("/image/cta-final/IMG_6765.webp"),
 };
 
 export const executionRisks = [
@@ -94,42 +95,42 @@ export const executionDifferentials = [
 
 export const executionPortfolioImages = [
   {
-    src: "/image/portfolio/obra%20completa%2000002.webp",
+    src: assetPath("/image/portfolio/obra%20completa%2000002.webp"),
     alt: "Ambiente integrado finalizado com acabamento sofisticado",
     caption: "Ambiente integrado entregue com acabamento finalizado",
   },
   {
-    src: "/image/portfolio/obra%20completa%2000004.webp",
+    src: assetPath("/image/portfolio/obra%20completa%2000004.webp"),
     alt: "Cozinha residencial finalizada com ilha e marcenaria",
     caption: "Cozinha executada com ilha, marcenaria e iluminação",
   },
   {
-    src: "/image/portfolio/obra%20completa%2000005.webp",
+    src: assetPath("/image/portfolio/obra%20completa%2000005.webp"),
     alt: "Área externa finalizada com forro de madeira",
     caption: "Área externa com forro de madeira e padrão de acabamento",
   },
   {
-    src: "/image/portfolio/obra%20completa%2000007.webp",
+    src: assetPath("/image/portfolio/obra%20completa%2000007.webp"),
     alt: "Ambiente interno residencial com acabamento finalizado",
     caption: "Interior entregue com atenção a detalhes de execução",
   },
   {
-    src: "/image/portfolio/20250807_213918460_iOS.webp",
+    src: assetPath("/image/portfolio/20250807_213918460_iOS.webp"),
     alt: "Banheiro finalizado com revestimento em pedra",
     caption: "Banheiro finalizado com revestimento em pedra",
   },
   {
-    src: "/image/portfolio/20250807_213929989_iOS.webp",
+    src: assetPath("/image/portfolio/20250807_213929989_iOS.webp"),
     alt: "Lavabo finalizado visto por outro ângulo",
     caption: "Lavabo entregue com acabamento consistente",
   },
   {
-    src: "/image/portfolio/20251101_152905548_iOS.webp",
+    src: assetPath("/image/portfolio/20251101_152905548_iOS.webp"),
     alt: "Cozinha e área social integradas com acabamento premium",
     caption: "Área social integrada com acabamento premium",
   },
   {
-    src: "/image/portfolio/casas%20prontas%2000002.webp",
+    src: assetPath("/image/portfolio/casas%20prontas%2000002.webp"),
     alt: "Fachada residencial moderna concluída",
     caption: "Fachada residencial concluída",
   },
