@@ -82,7 +82,10 @@ export const construtoraBenefits = [
   },
 ];
 
-export const construtoraPortfolio = visualPortfolioImages;
+const [photo1, , photo3, photo4, photo5, , , , photo9, photo10, photo11, photo12] = visualPortfolioImages;
+
+// Fotos 2, 6, 7 e 8 removidas a pedido do cliente
+export const construtoraPortfolio = [photo1, photo3, photo4, photo5, photo9, photo10, photo11, photo12];
 
 export const construtoraTestimonials = [
   { ...testimonials[0], tag: "Atendimento atencioso" },
