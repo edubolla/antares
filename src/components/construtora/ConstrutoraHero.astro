@@ -3,7 +3,7 @@ import CtaLink from "../CtaLink.astro";
 import { construtoraImages, construtoraMessages } from "../../data/construtora";
 ---
 
-<section class="relative min-h-screen overflow-hidden bg-antares-navy text-white">
+<section class="relative min-h-[calc(100svh-5rem)] overflow-hidden bg-antares-navy text-white sm:min-h-screen">
   <img
     src={construtoraImages.hero}
     alt="Casa residencial finalizada pela Antares Construtora"
@@ -12,7 +12,7 @@ import { construtoraImages, construtoraMessages } from "../../data/construtora";
   />
   <div class="absolute inset-0 bg-gradient-to-t from-antares-navy via-antares-navy/45 to-black/10"></div>
 
-  <div class="container-page relative z-10 flex min-h-screen items-end pb-14 pt-28 sm:pb-20 lg:pb-24">
+  <div class="container-page relative z-10 flex min-h-[calc(100svh-5rem)] items-center pb-10 pt-16 sm:min-h-screen sm:items-end sm:pb-20 sm:pt-28 lg:pb-24">
     <div class="max-w-3xl">
       <p class="mb-5 text-sm font-semibold uppercase tracking-[0.24em] text-white/70">Construtora em Canoas e região</p>
       <h1 class="text-4xl font-semibold tracking-[-0.06em] sm:text-6xl lg:text-7xl">

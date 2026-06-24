@@ -4,9 +4,9 @@ import { testimonials, visualPortfolioImages, whatsappUrl } from "./landing";
 export { whatsappUrl };
 
 export const construtoraMessages = {
-  default: "Olá, estou procurando uma construtora e gostaria de conversar com a Antares.",
-  terreno: "Olá, tenho um terreno e quero entender como a Antares pode me ajudar a construir.",
-  projeto: "Olá, já tenho o projeto da minha casa e quero falar sobre a execução da obra.",
+  default: "Olá, vim do site da Antares e estou procurando uma construtora para construir minha casa.",
+  terreno: "Olá, vim do site da Antares. Tenho um terreno e quero entender como vocês podem me ajudar a construir.",
+  projeto: "Olá, vim do site da Antares. Já tenho o projeto da minha casa e quero falar sobre a execução da obra.",
 };
 
 export const construtoraImages = {
