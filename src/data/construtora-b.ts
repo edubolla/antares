@@ -102,13 +102,13 @@ export const construtoraBFormOptions = {
     { value: "sim", label: "Sim" },
     { value: "nao", label: "Não" },
   ],
-  // Temporariamente ocultos no formulário para reduzir fricção.
-  // Mantidos aqui para reativar depois sem perder o contrato do webhook.
   financiamento: [
     { value: "valor_disponivel", label: "Já tenho o valor disponível" },
     { value: "financiar", label: "Pretendo financiar" },
     { value: "avaliando", label: "Ainda estou avaliando" },
   ],
+  // Temporariamente oculto no formulário para reduzir fricção.
+  // Mantido aqui para reativar depois sem perder o contrato do webhook.
   valor: [
     { value: "ate_130k", label: "Até R$ 130 mil" },
     { value: "130_200k", label: "De R$ 130 mil a R$ 200 mil" },

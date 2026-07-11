@@ -236,9 +236,9 @@
       var telefone =
         (form.elements.namedItem("telefone") && form.elements.namedItem("telefone").value.trim()) || "";
       var possuiTerreno = getRadioValue("possui_terreno");
-      // Campos de investimento temporariamente ocultos na LP.
-      // Continuam no payload (vazios) para não quebrar o contrato do webhook/n8n.
-      var formaInvestimento = getRadioValue("forma_investimento") || "";
+      var formaInvestimento = getRadioValue("forma_investimento");
+      // Faixa de valor temporariamente oculta para reduzir fricção.
+      // Continua no payload (vazia) para não quebrar o contrato do webhook/n8n.
       var valorInvestimento = getRadioValue("valor_investimento") || "";
       var isValid = true;
 
@@ -254,6 +254,11 @@
 
       if (!possuiTerreno) {
         setFieldError("possui_terreno", "Selecione uma opção.");
+        isValid = false;
+      }
+
+      if (!formaInvestimento) {
+        setFieldError("forma_investimento", "Selecione uma opção.");
         isValid = false;
       }
 
