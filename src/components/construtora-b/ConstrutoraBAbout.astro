@@ -1,0 +1,19 @@
+---
+import ScrollToLink from "../ScrollToLink.astro";
+import { construtoraBCopy, construtoraBPaths } from "../../data/construtora-b";
+---
+
+<section id="sobre" class="section-padding bg-antares-soft">
+  <div class="container-page mx-auto max-w-3xl text-center">
+    <p class="eyebrow mb-4">{construtoraBCopy.about.eyebrow}</p>
+    <h2 class="text-3xl font-semibold tracking-[-0.05em] text-antares-navy sm:text-5xl">
+      {construtoraBCopy.about.title}
+    </h2>
+    <div class="mt-8 space-y-4 text-lg leading-8 text-antares-muted">
+      {construtoraBCopy.about.paragraphs.map((paragraph) => (
+        <p>{paragraph}</p>
+      ))}
+    </div>
+    <ScrollToLink label={construtoraBCopy.about.cta} href={construtoraBPaths.formAnchor} class="mt-10 px-7 py-4 text-base" />
+  </div>
+</section>

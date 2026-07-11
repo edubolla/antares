@@ -1,0 +1,22 @@
+---
+import { construtoraBCopy } from "../../data/construtora-b";
+---
+
+<section id="diferenciais" class="section-padding bg-antares-navy text-white">
+  <div class="container-page">
+    <div class="mx-auto max-w-2xl text-center">
+      <p class="eyebrow mb-4 text-white/70">{construtoraBCopy.differentials.eyebrow}</p>
+      <h2 class="text-3xl font-semibold tracking-[-0.05em] sm:text-4xl">Por que escolher a Antares</h2>
+    </div>
+
+    <div class="mx-auto mt-12 grid max-w-5xl gap-6 md:grid-cols-3">
+      {construtoraBCopy.differentials.items.map((item) => (
+        <article class="rounded-[2rem] border border-white/10 bg-white/5 p-7">
+          <p class="text-xs font-semibold uppercase tracking-[0.2em] text-white/60">{construtoraBCopy.differentials.eyebrow}</p>
+          <h3 class="mt-4 text-xl font-semibold tracking-[-0.03em]">{item.title}</h3>
+          <p class="mt-4 leading-7 text-white/75">{item.description}</p>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

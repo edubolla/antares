@@ -27,3 +27,6 @@ Thumbs.db
 .vscode/*
 !.vscode/extensions.json
 !.vscode/settings.json
+
+# Originais JPEG arquivados (fora do deploy/FTP)
+image jpeg/

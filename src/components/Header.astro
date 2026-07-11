@@ -6,12 +6,14 @@ interface Props {
   navItems?: typeof navigation;
   ctaLabel?: string;
   ctaMessage?: string;
+  ctaHref?: string;
 }
 
 const {
   navItems = navigation,
   ctaLabel = "Falar no WhatsApp",
   ctaMessage = "Olá, comprei um terreno e quero entender como a Antares pode me ajudar com projeto e execução.",
+  ctaHref,
 } = Astro.props;
 ---
 
@@ -29,10 +31,17 @@ const {
       ))}
     </nav>
 
-    <CtaLink
-      label={ctaLabel}
-      message={ctaMessage}
-      class="hidden sm:inline-flex"
-    />
+    {
+      ctaHref ? (
+        <a
+          href={ctaHref}
+          class="hidden rounded-full bg-antares-blue px-6 py-3 text-sm font-semibold text-white transition hover:bg-antares-navy sm:inline-flex"
+        >
+          {ctaLabel}
+        </a>
+      ) : (
+        <CtaLink label={ctaLabel} message={ctaMessage} class="hidden sm:inline-flex" />
+      )
+    }
   </div>
 </header>

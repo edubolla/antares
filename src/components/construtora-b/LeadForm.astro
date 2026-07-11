@@ -1,0 +1,107 @@
+---
+import {
+  construtoraBCopy,
+  construtoraBFormOptions,
+  construtoraBWebhookUrl,
+} from "../../data/construtora-b";
+import { assetPath } from "../../data/assets";
+---
+
+<div id="formulario" class="w-full scroll-mt-28">
+  <div
+    class="rounded-[1.75rem] border border-white/15 bg-white p-5 text-left shadow-[0_24px_80px_rgba(0,0,0,0.35)] sm:p-7"
+  >
+    <p class="text-xs font-semibold uppercase tracking-[0.18em] text-antares-blue">
+      {construtoraBCopy.form.eyebrow}
+    </p>
+    <h2 class="mt-2 text-2xl font-semibold tracking-[-0.04em] text-antares-navy sm:text-[1.7rem]">
+      {construtoraBCopy.form.title}
+    </h2>
+    <p class="mt-2 text-sm leading-6 text-antares-muted">{construtoraBCopy.form.subtitle}</p>
+
+    <form
+      id="lead-form"
+      class="mt-6"
+      novalidate
+      data-webhook-url={construtoraBWebhookUrl}
+      data-form-id="construtora-b"
+    >
+      <div class="grid gap-4">
+        <div>
+          <label for="nome" class="mb-1.5 block text-sm font-semibold text-antares-navy">
+            Nome completo
+          </label>
+          <input
+            id="nome"
+            name="nome"
+            type="text"
+            autocomplete="name"
+            required
+            minlength="3"
+            class="w-full rounded-2xl border border-antares-line bg-antares-soft/40 px-4 py-3 text-antares-ink outline-none transition focus:border-antares-blue focus:bg-white focus:ring-4 focus:ring-antares-blue/10"
+            placeholder="Seu nome completo"
+          />
+          <p class="mt-1.5 hidden text-sm text-red-600" data-error-for="nome"></p>
+        </div>
+
+        <div>
+          <label for="telefone" class="mb-1.5 block text-sm font-semibold text-antares-navy">
+            Telefone / WhatsApp
+          </label>
+          <input
+            id="telefone"
+            name="telefone"
+            type="tel"
+            inputmode="tel"
+            autocomplete="tel"
+            required
+            maxlength="16"
+            class="w-full rounded-2xl border border-antares-line bg-antares-soft/40 px-4 py-3 text-antares-ink outline-none transition focus:border-antares-blue focus:bg-white focus:ring-4 focus:ring-antares-blue/10"
+            placeholder="(51) 99999-9999"
+          />
+          <p class="mt-1.5 hidden text-sm text-red-600" data-error-for="telefone"></p>
+        </div>
+
+        <fieldset>
+          <legend class="mb-2 block text-sm font-semibold text-antares-navy">
+            Você já possui um terreno?
+          </legend>
+          <div class="grid grid-cols-2 gap-2.5">
+            {
+              construtoraBFormOptions.terreno.map((option) => (
+                <label class="flex cursor-pointer items-center gap-2.5 rounded-2xl border border-antares-line bg-antares-soft/40 px-3.5 py-3 transition has-[:checked]:border-antares-blue has-[:checked]:bg-white has-[:checked]:ring-4 has-[:checked]:ring-antares-blue/10">
+                  <input
+                    type="radio"
+                    name="possui_terreno"
+                    value={option.value}
+                    required
+                    class="h-4 w-4 accent-antares-blue"
+                  />
+                  <span class="text-sm font-medium text-antares-navy">{option.label}</span>
+                </label>
+              ))
+            }
+          </div>
+          <p class="mt-1.5 hidden text-sm text-red-600" data-error-for="possui_terreno"></p>
+        </fieldset>
+      </div>
+
+      <p id="form-status" class="mt-4 hidden rounded-2xl px-4 py-3 text-sm" aria-live="polite"></p>
+
+      <button
+        type="submit"
+        class="mt-5 inline-flex w-full items-center justify-center rounded-full bg-antares-blue px-7 py-3.5 text-base font-semibold text-white transition hover:bg-antares-navy disabled:cursor-not-allowed disabled:opacity-60"
+        data-default-label={construtoraBCopy.form.submit}
+        data-loading-label={construtoraBCopy.form.submitting}
+      >
+        {construtoraBCopy.form.submit}
+      </button>
+
+      <p class="mt-3 text-center text-xs leading-5 text-antares-muted">
+        Seus dados são usados apenas para retorno da equipe Antares.
+      </p>
+    </form>
+  </div>
+</div>
+
+<script defer src={assetPath("/scripts/construtora-b-lead-form.js")}></script>

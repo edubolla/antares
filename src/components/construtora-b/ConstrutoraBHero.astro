@@ -1,0 +1,64 @@
+---
+import LeadForm from "./LeadForm.astro";
+import { construtoraBCopy, construtoraBImages } from "../../data/construtora-b";
+---
+
+<section class="relative overflow-hidden bg-antares-navy text-white">
+  <img
+    src={construtoraBImages.hero}
+    alt="Casa residencial finalizada pela Antares Construtora"
+    class="absolute inset-0 h-full w-full object-cover"
+    loading="eager"
+  />
+  <div class="absolute inset-0 bg-gradient-to-br from-antares-navy via-antares-navy/80 to-antares-navy/55"></div>
+  <div class="absolute inset-0 bg-gradient-to-t from-antares-navy/90 via-transparent to-black/20"></div>
+
+  <div class="container-page relative z-10 pb-14 pt-10 sm:pb-16 sm:pt-14 lg:pb-20 lg:pt-16">
+    <div class="grid items-center gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-12 xl:gap-16">
+      <div class="max-w-2xl">
+        <p class="mb-4 text-sm font-semibold uppercase tracking-[0.24em] text-white/70">
+          {construtoraBCopy.hero.eyebrow}
+        </p>
+        <h1 class="text-4xl font-semibold tracking-[-0.06em] sm:text-5xl lg:text-[3.4rem] lg:leading-[1.05]">
+          {construtoraBCopy.hero.title}
+        </h1>
+        <p class="mt-5 max-w-xl text-lg leading-8 text-white/80 sm:text-xl">
+          {construtoraBCopy.hero.subtitle}
+        </p>
+
+        <ul class="mt-8 grid gap-3 text-sm text-white/85 sm:grid-cols-2">
+          <li class="flex items-center gap-2.5 rounded-2xl border border-white/10 bg-white/5 px-4 py-3">
+            <span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-antares-blue text-xs font-bold"
+              >✓</span
+            >
+            Projeto + construção
+          </li>
+          <li class="flex items-center gap-2.5 rounded-2xl border border-white/10 bg-white/5 px-4 py-3">
+            <span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-antares-blue text-xs font-bold"
+              >✓</span
+            >
+            Equipe própria
+          </li>
+          <li class="flex items-center gap-2.5 rounded-2xl border border-white/10 bg-white/5 px-4 py-3">
+            <span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-antares-blue text-xs font-bold"
+              >✓</span
+            >
+            Financiamento orientado
+          </li>
+          <li class="flex items-center gap-2.5 rounded-2xl border border-white/10 bg-white/5 px-4 py-3">
+            <span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-antares-blue text-xs font-bold"
+              >✓</span
+            >
+            Atendimento em Canoas e região
+          </li>
+        </ul>
+
+        <p class="mt-6 text-sm text-white/65">{construtoraBCopy.hero.trust}</p>
+      </div>
+
+      <div class="mx-auto w-full max-w-md lg:mx-0 lg:max-w-none">
+        <LeadForm />
+      </div>
+    </div>
+  </div>
+</section>

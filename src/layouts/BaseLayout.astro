@@ -5,9 +5,11 @@ import { images } from "../data/landing";
 interface Props {
   title: string;
   description: string;
+  trackScroll?: boolean;
+  trackClicks?: boolean;
 }
 
-const { title, description } = Astro.props;
+const { title, description, trackScroll = true, trackClicks = true } = Astro.props;
 
 const gtmId = "GTM-TX5W6LW9";
 const gaId = "G-7HS68F46YS";
@@ -57,12 +59,28 @@ const gaId = "G-7HS68F46YS";
       ></iframe>
     </noscript>
     <slot />
-    <script is:inline>
+    <script is:inline define:vars={{ trackScroll, trackClicks }}>
       (function () {
+        if (window.__antaresPageTrackingBound) {
+          return;
+        }
+        window.__antaresPageTrackingBound = true;
+
         var sentScroll50 = false;
         var sentScroll100 = false;
+        var recentEvents = {};
 
         function trackEvent(eventName, params) {
+          var dedupeKey = eventName + "::" + window.location.pathname;
+          var now = Date.now();
+          var lastSent = recentEvents[dedupeKey] || 0;
+
+          if (now - lastSent < 1500) {
+            return;
+          }
+
+          recentEvents[dedupeKey] = now;
+
           var eventParams = Object.assign(
             {
               page_location: window.location.href,
@@ -73,16 +91,11 @@ const gaId = "G-7HS68F46YS";
 
           window.dataLayer = window.dataLayer || [];
           window.dataLayer.push(Object.assign({ event: eventName }, eventParams));
-
-          if (typeof window.gtag === "function") {
-            window.gtag("event", eventName, eventParams);
-          }
         }
 
-        function getScrollPercent() {
+        function getScrollableHeight() {
           var documentElement = document.documentElement;
           var body = document.body;
-          var scrollTop = window.scrollY || documentElement.scrollTop || body.scrollTop || 0;
           var scrollHeight = Math.max(
             body.scrollHeight,
             body.offsetHeight,
@@ -91,17 +104,29 @@ const gaId = "G-7HS68F46YS";
             documentElement.offsetHeight,
           );
           var viewportHeight = window.innerHeight || documentElement.clientHeight;
-          var scrollableHeight = scrollHeight - viewportHeight;
+          return scrollHeight - viewportHeight;
+        }
 
-          if (scrollableHeight <= 0) {
-            return 100;
+        function getScrollPercent() {
+          var scrollableHeight = getScrollableHeight();
+
+          if (scrollableHeight <= 50) {
+            return 0;
           }
+
+          var documentElement = document.documentElement;
+          var body = document.body;
+          var scrollTop = window.scrollY || documentElement.scrollTop || body.scrollTop || 0;
 
           return (scrollTop / scrollableHeight) * 100;
         }
 
         function handleScroll() {
           var scrollPercent = getScrollPercent();
+
+          if (scrollPercent <= 0) {
+            return;
+          }
 
           if (!sentScroll50 && scrollPercent >= 50) {
             sentScroll50 = true;
@@ -118,32 +143,36 @@ const gaId = "G-7HS68F46YS";
           }
         }
 
-        document.addEventListener("click", function (event) {
-          var link = event.target.closest("a[href]");
+        if (trackClicks) {
+          document.addEventListener("click", function (event) {
+            var link = event.target.closest("a[href]");
 
-          if (!link) {
-            return;
-          }
+            if (!link) {
+              return;
+            }
 
-          var href = link.href || "";
+            var href = link.href || "";
 
-          if (href.includes("wa.me") || href.includes("whatsapp.com")) {
-            trackEvent("btn_whatsapp", { link_url: href, link_text: link.textContent.trim() });
-            return;
-          }
+            if (href.includes("wa.me") || href.includes("whatsapp.com")) {
+              trackEvent("btn_whatsapp", { link_url: href, link_text: link.textContent.trim() });
+              return;
+            }
 
-          if (href.includes("instagram.com/antaresconstrutoracanoas")) {
-            trackEvent("btn_instagram", { link_url: href, link_text: link.textContent.trim() });
-            return;
-          }
+            if (href.includes("instagram.com/antaresconstrutoracanoas")) {
+              trackEvent("btn_instagram", { link_url: href, link_text: link.textContent.trim() });
+              return;
+            }
 
-          if (href.includes("facebook.com/antaresconstrutoracanoas")) {
-            trackEvent("btn_facebook", { link_url: href, link_text: link.textContent.trim() });
-          }
-        });
+            if (href.includes("facebook.com/antaresconstrutoracanoas")) {
+              trackEvent("btn_facebook", { link_url: href, link_text: link.textContent.trim() });
+            }
+          });
+        }
 
-        window.addEventListener("scroll", handleScroll, { passive: true });
-        handleScroll();
+        if (trackScroll && getScrollableHeight() > 50) {
+          window.addEventListener("scroll", handleScroll, { passive: true });
+          handleScroll();
+        }
       })();
     </script>
   </body>

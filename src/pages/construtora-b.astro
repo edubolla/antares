@@ -1,0 +1,41 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ConstrutoraBAbout from "../components/construtora-b/ConstrutoraBAbout.astro";
+import ConstrutoraBDifferentials from "../components/construtora-b/ConstrutoraBDifferentials.astro";
+import ConstrutoraBFinalCta from "../components/construtora-b/ConstrutoraBFinalCta.astro";
+import ConstrutoraBHero from "../components/construtora-b/ConstrutoraBHero.astro";
+import ConstrutoraBPortfolio from "../components/construtora-b/ConstrutoraBPortfolio.astro";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import MobileStickyCta from "../components/MobileStickyCta.astro";
+import { construtoraBCopy, construtoraBPaths } from "../data/construtora-b";
+---
+
+<BaseLayout
+  title="Antares Construtora | Construção Residencial em Canoas e Região"
+  description="Construa sua casa em Canoas e região com projeto, documentação e execução completa. Solicite orçamento sem compromisso."
+>
+  <Header
+    navItems={[
+      { label: "Sobre", href: "#sobre" },
+      { label: "Projetos", href: "#projetos" },
+      { label: "Diferenciais", href: "#diferenciais" },
+      { label: "Orçamento", href: construtoraBPaths.formAnchor },
+    ]}
+    ctaLabel={construtoraBCopy.hero.cta}
+    ctaHref={construtoraBPaths.formAnchor}
+  />
+  <main>
+    <ConstrutoraBHero />
+    <ConstrutoraBAbout />
+    <ConstrutoraBPortfolio />
+    <ConstrutoraBDifferentials />
+    <ConstrutoraBFinalCta />
+  </main>
+  <Footer
+    description="Construção residencial do zero em Canoas e região: projeto, documentação e execução completa."
+    ctaLabel={construtoraBCopy.hero.cta}
+    ctaHref={construtoraBPaths.formAnchor}
+  />
+  <MobileStickyCta label={construtoraBCopy.hero.cta} href={construtoraBPaths.formAnchor} />
+</BaseLayout>

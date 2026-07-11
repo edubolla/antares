@@ -6,12 +6,14 @@ interface Props {
   description?: string;
   ctaLabel?: string;
   ctaMessage?: string;
+  ctaHref?: string;
 }
 
 const {
   description = "Construção residencial, projeto, engenharia, documentação e execução completa em Canoas e região.",
   ctaLabel = "Chamar no WhatsApp",
   ctaMessage,
+  ctaHref,
 } = Astro.props;
 ---
 
@@ -39,7 +41,18 @@ const {
           <a href={contact.facebook} target="_blank" rel="noopener noreferrer" class="transition hover:text-white">Facebook</a>
           <p>WhatsApp: {whatsappLabel}</p>
         </div>
-        <CtaLink label={ctaLabel} message={ctaMessage} variant="light" class="mt-6" />
+        {
+          ctaHref ? (
+            <a
+              href={ctaHref}
+              class="mt-6 inline-flex rounded-full bg-white px-6 py-3 text-sm font-semibold text-antares-navy transition hover:bg-antares-soft"
+            >
+              {ctaLabel}
+            </a>
+          ) : (
+            <CtaLink label={ctaLabel} message={ctaMessage} variant="light" class="mt-6" />
+          )
+        }
       </div>
     </div>
 
